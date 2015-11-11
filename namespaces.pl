@@ -50,20 +50,34 @@ namespace(duho,'http://www.semanticdesktop.org/ontologies/2011/10/05/duho#','htt
 namespace(drmo,'http://www.semanticdesktop.org/ontologies/2012/03/06/drmo#','http://www.semanticdesktop.org/ontologies/2012/03/06/drmo/drmo_data.rdfs').
 
 
+namespace1(Abbr,IRI):-
+        namespace(Abbr, IRI), rdf_register_prefix(Abbr, IRI).
+namespace1(Abbr,IRI):-
+        namespace(Abbr, IRI), rdf_register_prefix(Abbr, IRI, _).
+
 register_prefixes:-
-        namespace(Abbr, IRI), rdf_register_prefix(Abbr, IRI), fail.
-register_prefixes:-
-        namespace(Abbr, IRI,_), rdf_register_prefix(Abbr, IRI), fail.
+        namespace1(Abbr, IRI), rdf_register_prefix(Abbr, IRI), fail.
 register_prefixes.
 
 load_from_internet:-
         namespace(NS,_, RDF), rdf_load(RDF, [graph(NS)]), fail; true.
 
+load_from_binary:-
+        namespace(G,_,_),
+        graph_binary_name(G,FN),
+        rdf_load_db(FN),fail.
+
+load_from_binary.
+
+graph_binary_name(G,N):-
+        atom_length(G,GL),GL<10,
+        atom_concat(G,'.db',N).
+
+
 save_dbs:-
         rdf_graph(G),
-        atom_length(G,GL),GL<10,
-        atom_concat(G,'.db',FN),
-        rdf_save_db(FN),
+        graph_binary_name(G,FN),
+        rdf_save_db(FN,G),
         fail.
 
 save_dbs:-
