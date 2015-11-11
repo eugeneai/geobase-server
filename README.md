@@ -1,2 +1,2 @@
 # icc.pengines
-Pengines' part od Semantic Server
+Pengines' part of Semantic Server
