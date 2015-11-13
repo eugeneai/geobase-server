@@ -69,9 +69,16 @@ load_from_internet:-
 load_from_binary:-
         namespace(G,_,_),
         graph_binary_name(G,FN),
-        rdf_load_db(FN),fail.
-
+        rdf_load_db_gz(FN),fail.
 load_from_binary.
+
+rdf_load_db_gz(FN):-
+        format(atom(CMD), 'gunzip -c data/~w.gz > ~w', [FN,FN]),
+        shell(CMD,_),
+        rdf_load_db(FN),
+        format(atom(CMD1), 'rm -f ~w', [FN]),
+        shell(CMD1,_).
+
 
 graph_binary_name(G,N):-
         atom_length(G,GL),GL<10,
