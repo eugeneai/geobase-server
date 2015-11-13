@@ -16,7 +16,7 @@ namespace(ns,'http://www.w3.org/2003/06/sw-vocab-status/ns#').
 namespace(protege,'http://protege.stanford.edu/system#').
 
 namespace(prov,'http://www.w3.org/ns/prov#'). %,'http://www.w3.org/ns/prov-core.xsd').
-
+namespace(wordnet, 'http://wordnet-rdf.princeton.edu/ontology').
 
 namespace(oa,'http://www.w3.org/ns/oa#','http://www.w3.org/ns/oa.owl').
 namespace(cnt,'http://www.w3.org/2011/content#','http://www.w3.org/2011/content#').
@@ -48,6 +48,10 @@ namespace(dao,'http://www.semanticdesktop.org/ontologies/2011/10/05/dao#','http:
 namespace(ddo,'http://www.semanticdesktop.org/ontologies/2011/10/05/ddo#','http://www.semanticdesktop.org/ontologies/2011/10/05/ddo/ddo_data.rdfs').
 namespace(duho,'http://www.semanticdesktop.org/ontologies/2011/10/05/duho#','http://www.semanticdesktop.org/ontologies/2011/10/05/duho/duho_data.rdfs').
 namespace(drmo,'http://www.semanticdesktop.org/ontologies/2012/03/06/drmo#','http://www.semanticdesktop.org/ontologies/2012/03/06/drmo/drmo_data.rdfs').
+
+namespace(lemon, 'http://lemon-model.net/lemon','http://lexinfo.net/ontology/lemon.rdf').
+
+                                % http://lexinfo.net/lmf.owl
 
 
 namespace1(Abbr,IRI):-
@@ -82,3 +86,5 @@ save_dbs:-
 
 save_dbs:-
         rdf_save("RDF-SCHEMAS.rdf").
+
+:- register_prefixes.
