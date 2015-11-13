@@ -16,8 +16,10 @@ namespace(ns,'http://www.w3.org/2003/06/sw-vocab-status/ns#').
 namespace(protege,'http://protege.stanford.edu/system#').
 
 namespace(prov,'http://www.w3.org/ns/prov#'). %,'http://www.w3.org/ns/prov-core.xsd').
-namespace(wordnet, 'http://wordnet-rdf.princeton.edu/ontology').
 
+namespace(wn, 'http://wordnet-rdf.princeton.edu/ontology','http://wordnet-rdf.princeton.edu/wn31.nt.gz').
+namespace(wordnet, 'http://www.w3.org/2006/03/wn/wn20/schema/','http://www.w3.org/2006/03/wn/wn20/schemas/wnfull.rdfs').
+namespace(owl,'http://www.w3.org/2002/07/owl#','http://www.w3.org/2002/07/owl').
 namespace(oa,'http://www.w3.org/ns/oa#','http://www.w3.org/ns/oa.owl').
 namespace(cnt,'http://www.w3.org/2011/content#','http://www.w3.org/2011/content#').
 namespace(dc,'http://purl.org/dc/elements/1.1/','http://dublincore.org/2012/06/14/dcelements.rdf'). % already defined
@@ -48,10 +50,14 @@ namespace(dao,'http://www.semanticdesktop.org/ontologies/2011/10/05/dao#','http:
 namespace(ddo,'http://www.semanticdesktop.org/ontologies/2011/10/05/ddo#','http://www.semanticdesktop.org/ontologies/2011/10/05/ddo/ddo_data.rdfs').
 namespace(duho,'http://www.semanticdesktop.org/ontologies/2011/10/05/duho#','http://www.semanticdesktop.org/ontologies/2011/10/05/duho/duho_data.rdfs').
 namespace(drmo,'http://www.semanticdesktop.org/ontologies/2012/03/06/drmo#','http://www.semanticdesktop.org/ontologies/2012/03/06/drmo/drmo_data.rdfs').
-
 namespace(lemon, 'http://lemon-model.net/lemon','http://lexinfo.net/ontology/lemon.rdf').
+namespace(v,'http://www.w3.org/2006/vcard/ns#','http://www.w3.org/2006/vcard/ns').
+
 
                                 % http://lexinfo.net/lmf.owl
+
+                                % Predefined namespaces http://dbpedia.org/sparql?nsdecl
+
 
 
 namespace1(Abbr,IRI):-
@@ -64,7 +70,10 @@ register_prefixes:-
 register_prefixes.
 
 load_from_internet:-
-        namespace(NS,_, RDF), rdf_load(RDF, [graph(NS)]), fail; true.
+        namespace(NS,_, RDF), \+ rdf_graph(NS),
+        rdf_load(RDF, [graph(NS)]),
+        save_db(NS),
+        fail; true.
 
 load_from_binary:-
         namespace(G,_,_),
@@ -85,13 +94,23 @@ graph_binary_name(G,N):-
         atom_concat(G,'.db',N).
 
 
-save_dbs:-
+save_db(G):-
         rdf_graph(G),
         graph_binary_name(G,FN),
-        rdf_save_db(FN,G),
-        fail.
+        rdf_save_db(FN,G).
 
 save_dbs:-
-        rdf_save("RDF-SCHEMAS.rdf").
+        save_db(_),
+        fail.
+save_dbs.
+
+%save_dbs:-
+%        rdf_save("RDF-SCHEMAS.rdf").
+
+load_default_graphs:-
+        load_from_binary,
+        load_from_internet.
+
 
 :- register_prefixes.
+:- load_default_graphs.
