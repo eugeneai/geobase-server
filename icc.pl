@@ -14,13 +14,13 @@
 :- use_module(library(semweb/rdf_persistency)).
 
 assert(S,P,O, G):-
-        write([S,P,O,G]).
+        rdf_assert(S,P,O, G).
 retractall(S,P,O, G):-
         rdf_retractall(S,P,O,G).
 triple(S,P,O):-
         rdf(S,P,O,document).
 triple(S,P,O):-
-        rdf(S,P,O,principal).
+        rdf(S,P,O,agent).
 triple(S,P,O, G):-
         rdf(S,P,O,G:_).
 update(S,P,O, G,Action):-
@@ -28,7 +28,7 @@ update(S,P,O, G,Action):-
 
 flush:-
         rdf_flush_journals([graph(document)]),
-        rdf_flush_journals([graph(principal)]).
+        rdf_flush_journals([graph(agent)]).
 
 content(document, Id, File, MimeType):- % document itself.
         content0(document, Id, Target),
@@ -67,3 +67,10 @@ content0(annotation, Id, Target, Body ):-
 mimetype(Target, MimeType):-
         rdf(Target, nmo:mimeType, MimeType, document).
 mimeType(_, none).
+
+create_graph(G):-
+        rdf_create_graph(G).
+
+create_graphs:-
+        rdf_create_graph(document),
+        rdf_create_graph(agent).
