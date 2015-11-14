@@ -4,3 +4,4 @@ passwd
 /config-enabled/
 daemon.pl
 
+/users.db

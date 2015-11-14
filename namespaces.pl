@@ -8,7 +8,7 @@
 :- use_module(library(http/http_ssl_plugin)).
 
 
-% namespace(rdf,'http://www.w3.org/1999/02/22-rdf-syntax-ns#').
+namespace(rdf,'http://www.w3.org/1999/02/22-rdf-syntax-ns#').
 namespace(rdfs,'http://www.w3.org/2000/01/rdf-schema#').
 namespace(trig,'http://www.w3.org/2004/03/trix/rdfg-1/'). % Dev stopped.
 namespace(dcam,'http://purl.org/dc/dcam/').
@@ -17,8 +17,6 @@ namespace(protege,'http://protege.stanford.edu/system#').
 
 namespace(prov,'http://www.w3.org/ns/prov#'). %,'http://www.w3.org/ns/prov-core.xsd').
 
-namespace(wn, 'http://wordnet-rdf.princeton.edu/ontology','http://wordnet-rdf.princeton.edu/wn31.nt.gz').
-namespace(wordnet, 'http://www.w3.org/2006/03/wn/wn20/schema/','http://www.w3.org/2006/03/wn/wn20/schemas/wnfull.rdfs').
 namespace(owl,'http://www.w3.org/2002/07/owl#','http://www.w3.org/2002/07/owl').
 namespace(oa,'http://www.w3.org/ns/oa#','http://www.w3.org/ns/oa.owl').
 namespace(cnt,'http://www.w3.org/2011/content#','http://www.w3.org/2011/content#').
@@ -50,8 +48,12 @@ namespace(dao,'http://www.semanticdesktop.org/ontologies/2011/10/05/dao#','http:
 namespace(ddo,'http://www.semanticdesktop.org/ontologies/2011/10/05/ddo#','http://www.semanticdesktop.org/ontologies/2011/10/05/ddo/ddo_data.rdfs').
 namespace(duho,'http://www.semanticdesktop.org/ontologies/2011/10/05/duho#','http://www.semanticdesktop.org/ontologies/2011/10/05/duho/duho_data.rdfs').
 namespace(drmo,'http://www.semanticdesktop.org/ontologies/2012/03/06/drmo#','http://www.semanticdesktop.org/ontologies/2012/03/06/drmo/drmo_data.rdfs').
-namespace(lemon, 'http://lemon-model.net/lemon','http://lexinfo.net/ontology/lemon.rdf').
+namespace(lemon, 'http://lemon-model.net/lemon#','http://lexinfo.net/ontology/lemon.rdf').
 namespace(v,'http://www.w3.org/2006/vcard/ns#','http://www.w3.org/2006/vcard/ns').
+
+                                %WordNet
+%namespace(wn, 'http://wordnet-rdf.princeton.edu/ontology#','http://wordnet-rdf.princeton.edu/wn31.nt.gz').
+%namespace(wordnet, 'http://www.w3.org/2006/03/wn/wn20/schema/','http://www.w3.org/2006/03/wn/wn20/schemas/wnfull.rdfs').
 
 
                                 % http://lexinfo.net/lmf.owl
@@ -61,9 +63,9 @@ namespace(v,'http://www.w3.org/2006/vcard/ns#','http://www.w3.org/2006/vcard/ns'
 
 
 namespace1(Abbr,IRI):-
-        namespace(Abbr, IRI), rdf_register_prefix(Abbr, IRI).
+        namespace(Abbr, IRI).
 namespace1(Abbr,IRI):-
-        namespace(Abbr, IRI), rdf_register_prefix(Abbr, IRI, _).
+        namespace(Abbr, IRI, _).
 
 register_prefixes:-
         namespace1(Abbr, IRI), rdf_register_prefix(Abbr, IRI), fail.
@@ -113,4 +115,4 @@ load_default_graphs:-
 
 
 :- register_prefixes.
-:- load_default_graphs.
+% :- load_default_graphs.
