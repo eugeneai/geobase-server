@@ -1,4 +1,4 @@
-#!/usr/bin/swipl 
+#!/usr/bin/swipl
 
 :- initialization cp_server.
 
@@ -64,6 +64,4 @@ file_search_path(cliopatria, '/home/eugeneai/Development/codes/icc.docnet/swi/ic
    ;   true
    ).
 
-:-[namespaces].
-
-
+%:-[namespaces].

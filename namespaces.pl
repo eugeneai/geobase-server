@@ -1,12 +1,6 @@
-:- use_module(library(semweb/rdf_db)).
-:- use_module(library(semweb/rdfs)).
-:- rdf_load(library(semweb/rdfs)).
-:- use_module(library(semweb/turtle)).	% Turtle and TRiG
-:- use_module(library(semweb/rdf_ntriples)).
-:- use_module(library(semweb/rdf_zlib_plugin)).
-:- use_module(library(semweb/rdf_http_plugin)).
-:- use_module(library(http/http_ssl_plugin)).
+:- module(namespaces, [namespace/2,namespace/3, register_prefixes/0]).
 
+:- use_module(library(semweb/rdf_db)).
 
 namespace(rdf,'http://www.w3.org/1999/02/22-rdf-syntax-ns#').
 namespace(rdfs,'http://www.w3.org/2000/01/rdf-schema#').
@@ -60,8 +54,6 @@ namespace(v,'http://www.w3.org/2006/vcard/ns#','http://www.w3.org/2006/vcard/ns'
 
                                 % Predefined namespaces http://dbpedia.org/sparql?nsdecl
 
-
-
 namespace1(Abbr,IRI):-
         namespace(Abbr, IRI).
 namespace1(Abbr,IRI):-
@@ -70,49 +62,3 @@ namespace1(Abbr,IRI):-
 register_prefixes:-
         namespace1(Abbr, IRI), rdf_register_prefix(Abbr, IRI), fail.
 register_prefixes.
-
-load_from_internet:-
-        namespace(NS,_, RDF), \+ rdf_graph(NS),
-        rdf_load(RDF, [graph(NS)]),
-        save_db(NS),
-        fail; true.
-
-load_from_binary:-
-        namespace(G,_,_),
-        graph_binary_name(G,FN),
-        rdf_load_db_gz(FN),fail.
-load_from_binary.
-
-rdf_load_db_gz(FN):-
-        format(atom(CMD), 'gunzip -c data/~w.gz > ~w', [FN,FN]),
-        shell(CMD,_),
-        rdf_load_db(FN),
-        format(atom(CMD1), 'rm -f ~w', [FN]),
-        shell(CMD1,_).
-
-
-graph_binary_name(G,N):-
-        atom_length(G,GL),GL<10,
-        atom_concat(G,'.db',N).
-
-
-save_db(G):-
-        rdf_graph(G),
-        graph_binary_name(G,FN),
-        rdf_save_db(FN,G).
-
-save_dbs:-
-        save_db(_),
-        fail.
-save_dbs.
-
-%save_dbs:-
-%        rdf_save("RDF-SCHEMAS.rdf").
-
-load_default_graphs:-
-        load_from_binary,
-        load_from_internet.
-
-
-:- register_prefixes.
-% :- load_default_graphs.
