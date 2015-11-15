@@ -1,0 +1,10 @@
+/* Generated file
+   Keep track of installed config files
+*/
+
+file('debug.pl','/home/eugeneai/Development/codes/icc.docnet/swi/icc.pengines/ClioPatria/config-available',1447409979).
+file('config.pl','/home/eugeneai/Development/codes/icc.docnet/swi/icc.pengines/ClioPatria/config-available',1447409979).
+file('store.pl','/home/eugeneai/Development/codes/icc.docnet/swi/icc.pengines/ClioPatria/config-available',1447409979).
+file('network.pl','/home/eugeneai/Development/codes/icc.docnet/swi/icc.pengines/ClioPatria/config-available',1447409979).
+file('zlib.pl','/home/eugeneai/Development/codes/icc.docnet/swi/icc.pengines/ClioPatria/config-available',1447409979).
+file('pengines.pl','/home/eugeneai/Development/codes/icc.docnet/swi/icc.pengines/ClioPatria/config-available',1447409979).

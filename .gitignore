@@ -1,7 +1,5 @@
 passwd
 /rdf/
 /RDF-store/
-/config-enabled/
-daemon.pl
 
 /users.db
