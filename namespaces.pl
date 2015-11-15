@@ -8,6 +8,7 @@ namespace(trig,'http://www.w3.org/2004/03/trix/rdfg-1/'). % Dev stopped.
 namespace(dcam,'http://purl.org/dc/dcam/').
 namespace(ns,'http://www.w3.org/2003/06/sw-vocab-status/ns#').
 namespace(protege,'http://protege.stanford.edu/system#').
+namespace(xsd,'http://www.w3.org/2001/XMLSchema#').
 
 namespace(prov,'http://www.w3.org/ns/prov#'). %,'http://www.w3.org/ns/prov-core.xsd').
 

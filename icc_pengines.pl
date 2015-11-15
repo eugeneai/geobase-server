@@ -23,13 +23,17 @@ sandbox:safe_primitive(icc:content(annotation,_,_)).
 sandbox:safe_primitive(icc:create_graph(_)).
 %sandbox:safe_primitive(icc:create_graphs).
 
-sandbox:safe_primitive(icc:agent(_,_,_)). % op, Id, foaf:Class.
+sandbox:safe_primitive(icc:agent(_,_,_)). % Id, foaf:Class, Ent, Opts, e.g. [create].
+sandbox:safe_primitive(icc:agent(_,_,_,_)). % Id, foaf:Class.
 sandbox:safe_primitive(icc:person(_,_)).
+sandbox:safe_primitive(icc:person(_,_,_)).
 sandbox:safe_primitive(icc:org(_,_)).
+sandbox:safe_primitive(icc:org(_,_,_)).
 sandbox:safe_primitive(icc:group(_,_)).
+sandbox:safe_primitive(icc:group(_,_,_)).
 
 sandbox:safe_primitive(icc:remove(_)).
-sandbox:safe_primitive(icc:entity(_,_,_)).
+sandbox:safe_primitive(icc:entity(_,_,_,_)).
 sandbox:safe_primitive(icc:type(_,_,_)).
 
 :- namespaces:register_prefixes.

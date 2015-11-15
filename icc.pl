@@ -21,8 +21,17 @@
         triple(r,r,r),
         triple(r,r,r,-),
         update(r,r,r,-,-),
-        agent(-,-,r),
-        entity(-,r,-),
+
+        agent(-,r,r,-),
+        agent(-,r,r),
+        person(-,r,-),
+        person(-,r),
+        org(-,r,-),
+        org(-,r),
+        group(-,r,-),
+        group(-,r),
+
+        entity(-,r,r,-),
         type(-,r,-),
         description(-,r,r,-),
         refs(r,r,-,-)
@@ -101,23 +110,38 @@ content0(annotation, Id, Target, Body ):-
         rdf(Body, nao:identifier,Id, document),
         rdf(Ann, oa:hasTarget, Target, document).
 
-agent(create, Id, Type):- % rdf:type
-        \+ agent(exists, Id, Type),!,
+agent(Id, Type, Agent):-
+        entity(Id, Agent, Type, _).
+
+agent(Id, Type, Agent, create):- % rdf:type
+        \+ entity(Id, Agent, Type, agent),!,
         rdf_bnode(Agent),
         assert(Agent, nao:identifier, literal(Id), agent),
         assert(Agent, rdf:type, Type, agent),
         flush(agent).
 
-agent(exists, Id, Type):-
-        entity(Id, Agent, _),
-        triple(Agent, rdf:type, Type, agent).
+agent(Id, Type, Agent, ensure_exists):-
+        (
+         \+ entity(Id, Agent, Type, agent),!,
+         agent(Id, Type, Agent, [create]),!;
+         entity(Id, Agent, Type, agent),!
+        ),!.
 
-person(Op, Id):-
-        agent(Op, Id, foaf:'Person').
-org(Op, Id):-
-        agent(Op, Id, foaf:'Organization').
-group(Op, Id):-
-        agent(Op, Id, foaf:'Group').
+agent(Id, Type, Agent, remove):-
+        entity(Id, Agent, Type, agent),!,
+        remove(Id),!.
+
+person(Id, Person):-agent(Id, foaf:'Person', Person).
+person(Id, Person, CMD):-
+        agent(Id, foaf:'Person', Person, CMD).
+
+org(Id, Org):-agent(Id, foaf:'Organization', Org).
+org(Id, Org, CMD):-
+        agent(Id, foaf:'Organization', Org, CMD).
+
+group(Id, Group):-group(Id, foaf:'Group', Group).
+group(Id, Group, CMD):-
+        agent(Id, foaf:'Group', Group, CMD).
 
 remove(Id):- % remove entity from graph moving it with references to it to deleted graph
         remove_entity(Id,[], G),
@@ -128,8 +152,9 @@ remove(Id):- % remove entity from graph moving it with references to it to delet
         flush(deleted).
 remove(_).
 
-entity(Id, Entity, Graph):-
-        triple(Entity, nao:identifier, literal(Id), Graph).
+entity(Id, Entity, Type, Graph):-
+        triple(Entity, nao:identifier, literal(Id), Graph),
+        triple(Entity, rdf:type, Type, Graph).
 
 type(Id, Class, Graph):-
         entity(Id, Entity, Graph),
