@@ -44,6 +44,10 @@ namespace(duho,'http://www.semanticdesktop.org/ontologies/2011/10/05/duho#','htt
 namespace(drmo,'http://www.semanticdesktop.org/ontologies/2012/03/06/drmo#','http://www.semanticdesktop.org/ontologies/2012/03/06/drmo/drmo_data.rdfs').
 namespace(lemon, 'http://lemon-model.net/lemon#','http://lexinfo.net/ontology/lemon.rdf').
 namespace(v,'http://www.w3.org/2006/vcard/ns#','http://www.w3.org/2006/vcard/ns').
+namespace(sioc,'http://rdfs.org/sioc/ns#','http://rdfs.org/sioc/ns').
+namespace(sioca,'http://rdfs.org/sioc/access#','http://rdfs.org/sioc/access').
+namespace(sioct,'http://rdfs.org/sioc/types#','http://rdfs.org/sioc/types').
+namespace(siocs,'http://rdfs.org/sioc/services#','http://rdfs.org/sioc/services').
 
                                 %WordNet
 %namespace(wn, 'http://wordnet-rdf.princeton.edu/ontology#','http://wordnet-rdf.princeton.edu/wn31.nt.gz').
