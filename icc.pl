@@ -54,7 +54,8 @@ retractall(S,P,O, G):-
         rdf_retractall(S,P,O,G).
 
 triple(S,P,O):-
-        rdf(S,P,O,agent).
+        rdf(S,P,O, G),
+        graph(G).
 triple(S,P,O, G):-
         rdf(S,P,O,G:_).
 update(S,P,O, G,Action):-
@@ -123,7 +124,7 @@ agent(Id, Type, Agent, create):- % rdf:type
 agent(Id, Type, Agent, ensure_exists):-
         (
          \+ entity(Id, Agent, Type, agent),!,
-         agent(Id, Type, Agent, [create]),!;
+         agent(Id, Type, Agent, create),!;
          entity(Id, Agent, Type, agent),!
         ),!.
 
@@ -210,7 +211,7 @@ load_from_internet:-
         fail; true.
 
 load_from_binary:-
-        namespace(G,_,_),
+        namespace(G,_,_), \+ rdf_graph(G),
         graph_binary_name(G,FN),
         rdf_load_db_gz(FN),fail.
 load_from_binary.
