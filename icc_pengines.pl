@@ -36,4 +36,7 @@ sandbox:safe_primitive(icc:remove(_)).
 sandbox:safe_primitive(icc:entity(_,_,_,_)).
 sandbox:safe_primitive(icc:type(_,_,_)).
 
+sandbox:safe_primitive(icc:sparql(_,_,_,_,_)).
+sandbox:safe_primitive(icc:sparql(_,_,_,_)).
+
 :- namespaces:register_prefixes.

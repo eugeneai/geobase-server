@@ -1,6 +1,6 @@
 :- module(icc, [assert/4,retractall/4,rdf/3,
                 rdf/4,update/5,flush/0,
-                content/4]).
+                content/4,sparql/5,sparql/4]).
 
 :- use_module(library(semweb/rdf_db)).
 :- use_module(library(semweb/rdfs)).
@@ -11,6 +11,7 @@
 :- use_module(library(semweb/rdf_http_plugin)).
 :- use_module(library(http/http_ssl_plugin)).
 :- use_module(library(semweb/rdf_persistency)).
+:- use_module(library(semweb/sparql_client)).
 :- use_module(namespaces).
 %:- use_module(library(ordset)).
 
@@ -199,6 +200,17 @@ create_graphs:-
         graph(Graph),
         rdf_create_graph(Graph),
         fail; true.
+
+
+sparql(Query, Host, Port, Graph, Row):-
+        sparql_query(Query, Row,
+                     [host(Host),port(Port), path('/sparql/'), search(graph(Graph))]
+                    ).
+
+sparql(Query, Host, Port, Row):-
+        sparql_query(Query, Row,
+                     [host(Host),port(Port), path('/sparql/')]
+                    ).
 
 
                                 % ---------------------------------- private
