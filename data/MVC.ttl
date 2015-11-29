@@ -1,12 +1,12 @@
-@base          <vc> .
-@prefix    vc: <http://purl.org/icc/view-controller/ns#> .
+@base          <mvc> .
+@prefix   mvc: <http://purl.org/icc/mvc/ns#> .
 @prefix   owl: <http://www.w3.org/2002/07/owl#> .
 @prefix   xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix   rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-vc:ns
+mvc:ns
     a owl:Ontology ;
-    rdfs:comment "Ontology for View-Controller user interface definition"@en ;
-    rdfs:label "Ontology for View-Controller UI definition"@en ;
+    rdfs:comment "Ontology for Model-View-Controller user interface definition"@en ;
+    rdfs:label "Ontology for MVC UI definition"@en ;
     owl:versionInfo "Draft"@en .

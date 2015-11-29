@@ -1,6 +1,25 @@
-:- module(icc, [assert/4,retractall/4,rdf/3,
-                rdf/4,update/5,flush/0,
-                content/4,sparql/5,sparql/4]).
+:- module(icc, [assert/4,
+                retractall/4,
+                triple/3,triple/4,
+                update/5,
+                graph/1,
+                flush/0,flush/1,
+                content/4,content/2,content/3,
+                file_mime/4,
+                agent/3,agent/4,
+                person/2,person/3,
+                org/2,org/3,
+                group/2,group/3,
+                remove/1,
+                entity/4,
+                type/3,
+                description/4,
+                refs/4,
+                mimetype/2,
+                create_graph/1,
+                sparql/5,sparql/4,
+
+                stub/0]).
 
 :- use_module(library(semweb/rdf_db)).
 :- use_module(library(semweb/rdfs)).
@@ -66,8 +85,8 @@ graph(document).
 graph(agent).
 graph(acl).
 graph(deleted).
-graph(vcm).      % View-Controller, as Model is a rdf itself metadata.
-graph(vc).       % and data itself.
+graph(mvc).      % View-Controller, as Model is a rdf itself metadata.
+graph(pres).      % and data itself (Pres[entation] graph).
 
 flush:-
         findall(graph(G), graph(G), L),
@@ -106,12 +125,12 @@ file_mime(Target,Content, File, MimeType):-
 content0(document, Id, Target):-
         rdf(Ann, rdf:type, oa:'Annotation', document),
         rdf(Ann, oa:hasTarget, Target, document),
-        rdf(Target, nao:identifier,Id, document).
+        rdf(Target, nie:identifier,Id, document).
 
 content0(annotation, Id, Target, Body ):-
         rdf(Ann, rdf:type, oa:'Annotation', document),
         rdf(Ann, oa:hasBody, Body, document),
-        rdf(Body, nao:identifier,Id, document),
+        rdf(Body, nie:identifier,Id, document),
         rdf(Ann, oa:hasTarget, Target, document).
 
 agent(Id, Type, Agent):-
@@ -120,7 +139,7 @@ agent(Id, Type, Agent):-
 agent(Id, Type, Agent, create):- % rdf:type
         \+ entity(Id, Agent, Type, agent),!,
         rdf_bnode(Agent),
-        assert(Agent, nao:identifier, literal(Id), agent),
+        assert(Agent, nie:identifier, literal(Id), agent),
         assert(Agent, rdf:type, Type, agent),
         flush(agent).
 
@@ -157,7 +176,7 @@ remove(Id):- % remove entity from graph moving it with references to it to delet
 remove(_).
 
 entity(Id, Entity, Type, Graph):-
-        triple(Entity, nao:identifier, literal(Id), Graph),
+        triple(Entity, nie:identifier, literal(Id), Graph),
         triple(Entity, rdf:type, Type, Graph).
 
 type(Id, Class, Graph):-
@@ -172,7 +191,7 @@ refs(S, P, Id, Graph):-
         triple(S, P, literal(Id), Graph).
 
 remove_entity(Id, Graphs, Out):-     % list_to_set(L,S).
-        triple(S,nao:identifier,literal(Id), Graph),
+        triple(S,nie:identifier,literal(Id), Graph),
         remove_entity(S, graph(Graph)),!,
         remove_entity(Id, [Graph|Graphs], Out).
 remove_entity(_,G,G).
@@ -185,7 +204,7 @@ remove_entity(S, graph(G)):-
 
 remove_refs(Id, G,O):-
         triple(S,P,literal(Id), Graph),
-        P\=nao:identifier,!,
+        P\=nie:identifier,!,
         assert(S,P,literal(Id), deleted),
         retractall(S,P,literal(Id), Graph),
         remove_refs(Id, [Graph|G], O).
@@ -270,3 +289,5 @@ load_default_graphs:-
 
 :- create_graphs.
 :- load_default_graphs.
+
+stub.

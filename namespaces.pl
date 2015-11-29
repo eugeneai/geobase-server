@@ -16,7 +16,7 @@ namespace(prov,'http://www.w3.org/ns/prov#'). %,'http://www.w3.org/ns/prov-core.
 
 namespace(owl,'http://www.w3.org/2002/07/owl#','http://www.w3.org/2002/07/owl').
 namespace(oa,'http://www.w3.org/ns/oa#','http://www.w3.org/ns/oa.owl').
-namespace(cnt,'http://www.w3.org/2011/content#','http://www.w3.org/2011/content#').
+namespace(cnt,'http://www.w3.org/2011/content#','http://www.w3.org/2011/content').
 namespace(dc,'http://purl.org/dc/elements/1.1/','http://dublincore.org/2012/06/14/dcelements.rdf'). % already defined
 namespace(dcterms,'http://purl.org/dc/terms/', 'http://dublincore.org/2012/06/14/dcterms.rdf').
 namespace(dctypes,'http://purl.org/dc/dcmitype/','http://dublincore.org/2012/06/14/dctype.rdf').
@@ -75,7 +75,7 @@ namespace(swrl,'http://www.w3.org/2003/11/swrl#','http://www.w3.org/Submission/2
                                 % https://schema.org/docs/gs.html % Global Google, MS, Yahoo project on description of everything. Very expressive vocabulary.
 
 
-namespace(vcm,'http://purl.org/icc/view-controller/ns#','data/View-Controller.ttl',debug). % Our View-Controller ontology.
+namespace(mvc,'http://purl.org/icc/MVC/ns#','data/MVC.ttl',debug). % Our View-Controller ontology.
 
 
 namespace1(Abbr,IRI,[]):-
