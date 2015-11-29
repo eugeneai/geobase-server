@@ -1,4 +1,4 @@
-:- module(namespaces, [namespace/2,namespace/3, register_prefixes/0]).
+:- module(namespaces, [namespace/2,namespace/3, namespace/4, register_prefixes/0]).
 
 :- use_module(library(semweb/rdf_db)).
 
@@ -75,13 +75,16 @@ namespace(swrl,'http://www.w3.org/2003/11/swrl#','http://www.w3.org/Submission/2
                                 % https://schema.org/docs/gs.html % Global Google, MS, Yahoo project on description of everything. Very expressive vocabulary.
 
 
+namespace(vcm,'http://purl.org/icc/view-controller/ns#','data/View-Controller.ttl',debug). % Our View-Controller ontology.
 
 
-namespace1(Abbr,IRI):-
+namespace1(Abbr,IRI,[]):-
         namespace(Abbr, IRI).
-namespace1(Abbr,IRI):-
+namespace1(Abbr,IRI,[]):-
         namespace(Abbr, IRI, _).
+namespace1(Abbr,IRI,[force(true)]):-
+        namespace(Abbr, IRI, _, debug).
 
 register_prefixes:-
-        namespace1(Abbr, IRI), rdf_register_prefix(Abbr, IRI), fail.
+        namespace1(Abbr, IRI, Op), rdf_register_prefix(Abbr, IRI, Op), fail.
 register_prefixes.

@@ -66,6 +66,8 @@ graph(document).
 graph(agent).
 graph(acl).
 graph(deleted).
+graph(vcm).      % View-Controller, as Model is a rdf itself metadata.
+graph(vc).       % and data itself.
 
 flush:-
         findall(graph(G), graph(G), L),
@@ -220,7 +222,15 @@ load_from_internet:-
         namespace(NS,_, RDF), \+ rdf_graph(NS),
         rdf_load(RDF, [graph(NS)]),
         save_db(NS),
-        fail; true.
+        fail.
+
+load_from_internet:-      % Debugging load. Previous graph is removed.
+        namespace(NS,_, RDF, debug),
+        rdf_unload_graph(NS),
+        rdf_load(RDF, [graph(NS)]),
+        fail.
+
+load_from_internet.
 
 load_from_binary:-
         namespace(G,_,_), \+ rdf_graph(G),
