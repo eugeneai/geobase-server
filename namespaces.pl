@@ -9,6 +9,8 @@ namespace(dcam,'http://purl.org/dc/dcam/').
 namespace(ns,'http://www.w3.org/2003/06/sw-vocab-status/ns#').
 namespace(protege,'http://protege.stanford.edu/system#').
 namespace(xsd,'http://www.w3.org/2001/XMLSchema#').
+namespace(cll,'http://purl.org/cellula/ns#').
+
 
 namespace(prov,'http://www.w3.org/ns/prov#'). %,'http://www.w3.org/ns/prov-core.xsd').
 
@@ -45,12 +47,21 @@ namespace(duho,'http://www.semanticdesktop.org/ontologies/2011/10/05/duho#','htt
 namespace(drmo,'http://www.semanticdesktop.org/ontologies/2012/03/06/drmo#','http://www.semanticdesktop.org/ontologies/2012/03/06/drmo/drmo_data.rdfs').
 namespace(lemon, 'http://lemon-model.net/lemon#','http://lexinfo.net/ontology/lemon.rdf').
 namespace(v,'http://www.w3.org/2006/vcard/ns#','http://www.w3.org/2006/vcard/ns').
-namespace(sioc,'http://rdfs.org/sioc/ns#','http://rdfs.org/sioc/ns').
+namespace(sioc,'http://rdfs.org/sioc/ns#','http://rdfs.org/sioc/ns'). % User account and groups is here!!
 namespace(sioca,'http://rdfs.org/sioc/access#','http://rdfs.org/sioc/access').
 namespace(sioct,'http://rdfs.org/sioc/types#','http://rdfs.org/sioc/types').
 namespace(siocs,'http://rdfs.org/sioc/services#','http://rdfs.org/sioc/services').
 
-                                %WordNet
+namespace(ui,'http://www.w3.org/ns/ui#','http://www.w3.org/ns/ui').
+namespace(pattern,'http://www.essepuntato.it/2008/12/pattern#','data/pattern.owl').
+namespace(swrl,'http://www.w3.org/2003/11/swrl#','http://www.w3.org/Submission/2004/SUBM-SWRL-20040521/swrl.rdf').
+
+                                % namespace(cogs,'http://vocab.deri.ie/cogs#','http://vocab.deri.ie/cogs.rdf'). % ETL Database manipulation ontology
+                                % namespace(meb,'http://rdf.myexperiment.org/ontologies/base/','http://rdf.myexperiment.org/ontologies/base/'). % Messages from a user to another are here.
+
+                                % namespace(swrlb,'http://www.w3.org/2003/11/swrlb#','https://github.com/kemlg/owlseditor/raw/master/owlseditor/contrib/owl-s/swrlb.owl').
+
+                                % WordNet
 %namespace(wn, 'http://wordnet-rdf.princeton.edu/ontology#','http://wordnet-rdf.princeton.edu/wn31.nt.gz').
 %namespace(wordnet, 'http://www.w3.org/2006/03/wn/wn20/schema/','http://www.w3.org/2006/03/wn/wn20/schemas/wnfull.rdfs').
 
@@ -58,6 +69,13 @@ namespace(siocs,'http://rdfs.org/sioc/services#','http://rdfs.org/sioc/services'
                                 % http://lexinfo.net/lmf.owl
 
                                 % Predefined namespaces http://dbpedia.org/sparql?nsdecl
+                                % http://purl.org/spar/doco Document part ontology, but text document, not law.
+                                % http://purl.org/spar/deo Discource elements, that is analogous DOCO
+                                % http://www.ai.sri.com/daml/services/owl-s/1.2/ Process denoting ontology, Agents, Grouping, etc.
+                                % https://schema.org/docs/gs.html % Global Google, MS, Yahoo project on description of everything. Very expressive vocabulary.
+
+
+
 
 namespace1(Abbr,IRI):-
         namespace(Abbr, IRI).
