@@ -11,6 +11,9 @@
 :- use_module(namespaces).
 :- use_module(icc).
 
+:- rdf_meta
+        exp(r).
+
 ns:-
         rdf_register_prefix(vdef,'http://irnok.net/icc/webapp#', [force(true)]).
 
@@ -41,6 +44,18 @@ handle_bars:-
         rdf_assert(HB,nfo:link,'http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars.runtime-v4.0.5.js',pres).
 
 % Add identifiers instead of labels.
+exp(vdef:personView).
+exp(vdef:handlebars).
+exp(vdef:javaScriptInclusion).
 
+test(remove_all):-
+        exp(Ent),
+        rdf_retractall(Ent,_,_,pres),
+        fail;true.
+
+test(reset):-
+        test(remove_all),
+        handle_bars,
+        person_view.
 
 :-initialization(ns).
