@@ -34,8 +34,8 @@ add_relative_search_path(Alias, Abs) :-
 add_relative_search_path(Alias, Rel) :-
 	assertz(user:file_search_path(Alias, Rel)).
 
-file_search_path(cliopatria, '/home/eugeneai/Development/codes/icc.docnet/swi/icc.pengines/ClioPatria').
-:- add_relative_search_path(cliopatria, '/home/eugeneai/Development/codes/icc.docnet/swi/icc.pengines/ClioPatria').
+file_search_path(cliopatria, 'ClioPatria').
+:- add_relative_search_path(cliopatria, 'ClioPatria').
 
 % Make loading files silent. Comment if you want verbose loading.
 

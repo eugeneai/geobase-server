@@ -19,6 +19,7 @@
                 create_graph/1,
                 sparql/5,sparql/4,
                 ptest/1,
+                template_query/3,
 
                 stub/0]).
 
@@ -57,6 +58,8 @@
         description(-,r,r,-),
         refs(r,r,-,-),
         ptest(r)
+
+
         .
 
 gl(NS:Term, G):-
@@ -236,6 +239,27 @@ sparql(Query, Host, Port, Row):-
         sparql_query(Query, Row,
                      [host(Host),port(Port), path('/sparql/')]
                     ).
+
+template_query_clean1(literal(S),S):-!.
+template_query_clean1(lang(_,S),S):-!.
+template_query_clean1(type(_,S),S):-!.
+template_query_clean1(S,S):-!.
+
+template_query0([],I,O):-!,
+        template_query_clean1(I,O).
+template_query0([X|T],I,O):-atom(I),!,
+        triple(I,X,R),
+        template_query0(T,R,O).
+template_query0(Q,[X],R):-!,
+        template_query0(Q,X,R).
+template_query0(Q,[X|_],R):-
+        template_query0(Q,X,R).
+template_query0(Q,[_|T],R):-
+        template_query0(Q,T,R).
+
+template_query(Query, Subjects, Object):-
+        rdf_global_term(Query,Q), rdf_global_term(Subjects,S),!,
+        template_query0(Q,S,Object).
 
 
                                 % ---------------------------------- private
