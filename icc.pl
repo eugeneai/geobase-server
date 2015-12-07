@@ -18,6 +18,7 @@
                 mimetype/2,
                 create_graph/1,
                 sparql/5,sparql/4,
+                ptest/1,
 
                 stub/0]).
 
@@ -54,7 +55,8 @@
         entity(-,r,r,-),
         type(-,r,-),
         description(-,r,r,-),
-        refs(r,r,-,-)
+        refs(r,r,-,-),
+        ptest(r)
         .
 
 gl(NS:Term, G):-
@@ -86,7 +88,9 @@ graph(agent).
 graph(acl).
 graph(deleted).
 graph(mvc).      % View-Controller, as Model is a rdf itself metadata.
-graph(pres).      % and data itself (Pres[entation] graph).
+graph(pres).     % and data itself (Pres[entation] graph).
+
+ptest('Ok').
 
 flush:-
         findall(graph(G), graph(G), L),

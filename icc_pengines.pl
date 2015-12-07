@@ -39,4 +39,7 @@ sandbox:safe_primitive(icc:type(_,_,_)).
 sandbox:safe_primitive(icc:sparql(_,_,_,_,_)).
 sandbox:safe_primitive(icc:sparql(_,_,_,_)).
 
+sandbox:safe_primitive(icc:ptest(_)).
+sandbox:safe_primitive(icc:graph(_)).
+
 :- namespaces:register_prefixes.
