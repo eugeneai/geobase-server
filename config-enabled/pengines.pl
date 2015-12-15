@@ -12,6 +12,7 @@ Provide access to ClioPatria's RDF store using pengines.
 
 % Maximum time a pengine may execute
 % :- set_setting_default(pengines:time_limit, 300).
+:- set_setting_default(pengines:slave_limit, 300).
 
 % Only allow connections from localhost.  Use `[*]` to allow access from
 % anywhere.  Note that the cpack `swish` also depends on this setting.
