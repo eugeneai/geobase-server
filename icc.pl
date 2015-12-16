@@ -20,6 +20,8 @@
                 sparql/5,sparql/4,
                 ptest/1,
                 template_query/3,
+                annotation_query/4,
+                annotation_query/5,
 
                 stub/0]).
 
@@ -56,6 +58,7 @@
         entity(-,r,r,-),
         type(-,r,-),
         description(-,r,r,-),
+        refs(r,r,-,-),
         refs(r,r,-,-),
         ptest(r)
 
@@ -261,6 +264,20 @@ template_query(Query, Subjects, Object):-
         rdf_global_term(Query,Q), rdf_global_term(Subjects,S),!,
         template_query0(Q,S,Object).
 
+annotation_query(target, Target_Id, Ann, Target):-
+        triple(Target, nie:identifier, literal(Target_Id), document),
+        triple(Ann, oa:hasTarget, Target, document),
+        triple(Ann, rdf:type, oa:'Annotation', document),!.
+
+annotation_query(body, Body_Id, Ann, Body):-
+        triple(Body, nie:identifier, literal(Body_Id), document),
+        triple(Ann, oa:hasBody, Body, document),
+        triple(Ann, rdf:type, oa:'Annotation', document),!.
+
+annotation_query(body, Target_Id, Ann, Body, Body_Id):-
+        annotation_query(target, Target_Id, Ann, _),
+        triple(Ann, oa:hasBody, Body, document),
+        triple(Body, nie:identifier, literal(Body_Id)).
 
                                 % ---------------------------------- private
 

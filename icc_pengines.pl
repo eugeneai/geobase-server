@@ -42,5 +42,8 @@ sandbox:safe_primitive(icc:sparql(_,_,_,_)).
 sandbox:safe_primitive(icc:ptest(_)).
 sandbox:safe_primitive(icc:graph(_)).
 sandbox:safe_primitive(icc:template_query(_,_,_)).
+sandbox:safe_primitive(icc:annotation_query(target,_,_,_)).
+sandbox:safe_primitive(icc:annotation_query(body,_,_,_,_)).
+sandbox:safe_primitive(icc:annotation_query(body,_,_,_)).
 
 :- namespaces:register_prefixes.
