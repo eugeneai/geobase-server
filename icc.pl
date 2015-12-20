@@ -279,6 +279,21 @@ annotation_query(body, Target_Id, Ann, Body, Body_Id):-
         triple(Ann, oa:hasBody, Body, document),
         triple(Body, nie:identifier, literal(Body_Id)).
 
+annotation_remove(target, Target_Id):-
+        annotation_query(target, Target_Id, Ann, Target),
+        annotation_remove_bodies(Ann),
+        rdf_retractall(Target,_,_, document),
+        rdf_retractall(Ann,_,_, document),
+        flush(document).
+
+annotation_remove_bodies(Ann):-
+        triple(Ann, oa:hasBody, B),
+        rdf_retractall(B,_,_, document),
+        fail;
+        true.
+
+
+
                                 % ---------------------------------- private
 
 

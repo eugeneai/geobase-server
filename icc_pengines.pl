@@ -45,5 +45,6 @@ sandbox:safe_primitive(icc:template_query(_,_,_)).
 sandbox:safe_primitive(icc:annotation_query(target,_,_,_)).
 sandbox:safe_primitive(icc:annotation_query(body,_,_,_,_)).
 sandbox:safe_primitive(icc:annotation_query(body,_,_,_)).
+sandbox:safe_primitive(icc:annotation_remove(target,_)).
 
 :- namespaces:register_prefixes.
