@@ -9,7 +9,6 @@ namespace(dcam,'http://purl.org/dc/dcam/').
 namespace(ns,'http://www.w3.org/2003/06/sw-vocab-status/ns#').
 namespace(protege,'http://protege.stanford.edu/system#').
 namespace(xsd,'http://www.w3.org/2001/XMLSchema#').
-namespace(cll,'http://purl.org/cellula/ns#').
 
 
 namespace(prov,'http://www.w3.org/ns/prov#'). %,'http://www.w3.org/ns/prov-core.xsd').
@@ -55,6 +54,7 @@ namespace(siocs,'http://rdfs.org/sioc/services#','http://rdfs.org/sioc/services'
 namespace(ui,'http://www.w3.org/ns/ui#','http://www.w3.org/ns/ui').
 namespace(pattern,'http://www.essepuntato.it/2008/12/pattern#','data/pattern.owl').
 namespace(swrl,'http://www.w3.org/2003/11/swrl#','http://www.w3.org/Submission/2004/SUBM-SWRL-20040521/swrl.rdf').
+namespace(ov,'http://open.vocab.org/terms/','http://vocab.org/open/terms.rdf'). % OpenVocab is a community maintained vocabulary intended for use on the Semantic Web, ideal for properties and classes that don't warrant the effort of creating or maintaining a full schema. OpenVocab allows anyone to create and modify vocabulary terms using their web browser.
 
                                 % namespace(cogs,'http://vocab.deri.ie/cogs#','http://vocab.deri.ie/cogs.rdf'). % ETL Database manipulation ontology
                                 % namespace(meb,'http://rdf.myexperiment.org/ontologies/base/','http://rdf.myexperiment.org/ontologies/base/'). % Messages from a user to another are here.
@@ -76,7 +76,7 @@ namespace(swrl,'http://www.w3.org/2003/11/swrl#','http://www.w3.org/Submission/2
 
 
 namespace(mvc,'http://purl.org/icc/MVC/ns#','data/MVC.ttl',debug). % Our View-Controller ontology.
-
+namespace(cll,'http://purl.org/cellula/ns#','data/CLL.ttl',debug). % Our ontology.
 
 namespace1(Abbr,IRI,[]):-
         namespace(Abbr, IRI).
