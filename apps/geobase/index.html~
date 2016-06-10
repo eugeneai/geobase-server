@@ -1,0 +1,166 @@
+﻿<html >   
+	<head>
+	    <script src="/vendor/jquery/jquery-2.0.3.min.js"></script>
+	<script src="/vendor/handlebars/handlebars.js"></script>    
+	<script src="/pengine/pengines.js"></script>
+	<!---   <style> </style> -->
+	<style type="text/css">
+            body, input, textarea {
+	    		font-family: monospace;
+	    		font-size: 14px;
+			background: #002211;
+			color: #000000;
+	    	}
+	    	textarea, input {
+	    		width: 100%;
+	    		padding: 4px;
+	    	}
+		#query{
+		background: #FFFFFF;
+		}
+		#block{
+			height: 90%;
+			background: #FFFFFF;
+			border-radius:10px;
+			padding: 4px;
+		}
+		#blockcontrol{
+			text-align: center;
+			border-radius:10px;
+			height: 97%;
+			padding: 4px;
+			margin: auto;
+			color: #770000;
+		}
+		#foot{
+		color: #FFFFFF;
+		}
+	table {
+                font-family: monotype;
+                font-size: 16px;
+                border-width: 1px;
+                border-collapse: collapse;
+            }
+            table th {
+                padding: 8px;
+                border-width: 1px;
+                border-style: solid;
+                background-color: #dedede;
+            }
+            table td {
+                border-width: 1px;
+                padding: 8px;
+                border-style: solid;
+            }
+        </style>
+	<script id="myTemplate" type="text/x-handlebars-template">
+            <table>
+                <thead>
+                    <th>Name</th>
+                    <th>Ancestor</th>
+                </thead>
+                <tbody>
+                    {{#rows}}
+                        <tr>
+                            <td>{{name}}</td>
+                            <td>{{ancestor}}</td>
+                        </tr>
+                    {{/rows}}
+                </tbody>
+            </table>
+	<div id="block">
+		<fieldset id="blockControl">
+		<img src="fault.jpg" width="100%" height="50%" />
+		<h3>Введите запрос</h3>
+<!--		<input type="text" id="query" value="geobase('Strike of Kandatsky fault')"/> -->
+		<input type="text" id="query" value="population of state"/>
+		<button onclick="query()">First</button>
+		<button onclick="pengine.next()">Next</button>
+		<button onclick="pengine.stop()">Stop</button>
+		<button onclick="pengine.abort()">Abort</button>
+		<button onclick="$('#output').html('')">Clear output</button>
+				
+		<h3>Output</h3>
+		<div id="output"></div>
+		</fieldset>
+		</div>
+		<div id="foot">
+		Контакты для связи:
+		</div>
+        </script>
+	    <script>
+	        var pengine;
+		    function query() {
+	    	    var query_str=$('#query').val();
+            	    var qtbl="table('"+query_str+"',Table)";
+            	    // alert(qtbl);
+
+    		    pengine = new Pengine({
+    		        ask: qtbl,
+    		        onsuccess: handleSuccess,
+    		        onfailure: handleFailure,
+    		        onerror:   handleError,
+    		        src: $("#src").val()
+    		    });
+		    }
+		    function handleSuccess() {
+		        var solution = JSON.stringify(this.data);
+				write(solution);
+				if (!this.more) {
+					write("No more solutions");
+				}
+		    }
+		    function handleFailure() {
+		        write("Failed");;
+		    }
+		    function handleError() {
+		        write(this.data);
+		    }
+	    	function write(string) {
+	    		$('#output').append(string + "<br />")
+	    	}
+	    </script>
+	<script type="text/x-prolog">
+
+            table(Query, json{rows:SortedRows}) :-
+                findall(json{result:N, entity:A}, geobase(Query, N, A), Rows),
+                sort(Rows, SortedRows).
+
+        </script>
+        <script>
+            var template = $('#myTemplate').html();
+            var compiledTemplate = Handlebars.compile(template);
+
+            pengine = new Pengine({
+                ask: atbl,
+                onsuccess: applyTemplate
+            })
+
+            function applyTemplate(results) {
+                var result = compiledTemplate(results.data[0].Table);
+                $('body').html(result)
+            }
+
+        </script>
+	</head>
+	<body>
+		<div id="block">
+		<fieldset id="blockControl">
+		<img src="fault.jpg" width="100%" height="50%" />
+		<h3>Введите запрос</h3>
+		<input type="text" id="query" value="state"/>
+		<button onclick="query()">First</button>
+		<button onclick="pengine.next()">Next</button>
+		<button onclick="pengine.stop()">Stop</button>
+		<button onclick="pengine.abort()">Abort</button>
+		<button onclick="$('#output').html('')">Clear output</button>
+				
+		<h3>Output</h3>
+		<div id="output"></div>
+		</fieldset>
+		</div>
+		<div id="foot">
+		Контакты для связи:
+		</div>
+	</body>
+</html>
