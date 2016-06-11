@@ -1,0 +1,10 @@
+﻿/*  Saved settings
+    Date: Sun May 22 22:13:51 2016
+*/
+
+
+%	Port on the public server
+setting(http:public_port, 9080).
+
+%	Version of jquery served by the html resource "jquery"
+setting(jquery:version, '2.1.3.min').

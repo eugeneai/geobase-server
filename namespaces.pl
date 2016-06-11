@@ -77,6 +77,7 @@ namespace(ov,'http://open.vocab.org/terms/','http://vocab.org/open/terms.rdf'). 
 
 namespace(mvc,'http://purl.org/icc/MVC/ns#','data/MVC.ttl',debug). % Our View-Controller ontology.
 namespace(cll,'http://purl.org/cellula/ns#','data/CLL.ttl',debug). % Our ontology.
+namespace(geob,'http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#','data/activity_fall.ttl',debug). % Our Geobase ontology.
 
 namespace1(Abbr,IRI,[]):-
         namespace(Abbr, IRI).
