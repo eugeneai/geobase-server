@@ -4,3 +4,4 @@ passwd
 
 /users.db
 catalog-v*.xml
+/data/activity_fall_data.ttl
