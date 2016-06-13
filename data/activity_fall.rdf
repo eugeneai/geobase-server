@@ -21,33 +21,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#absolute_deformation_age -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#absolute_deformation_age">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#age"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#activity_degree -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#activity_degree">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#property"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#age -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#age">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#property"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#amplitude_slip -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#amplitude_slip">
@@ -75,6 +48,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#associatedCSS -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#associatedCSS">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#associatedIGGSS -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#associatedIGGSS">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#property"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#averaged_slip_rate_mm_year -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#averaged_slip_rate_mm_year">
@@ -93,13 +82,21 @@
     
 
 
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#cenosoic -->
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#cenosoicSlip -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#cenosoic">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#cenosoicSlip">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#property"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Slip"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Cenosoic_Slip"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#CenosoicSlip"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#degree -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#degree">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#value"/>
     </owl:ObjectProperty>
     
 
@@ -139,16 +136,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#engineering_geological -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#engineering_geological">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#geological"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#feature -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#feature">
@@ -160,67 +147,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#geological -->
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#isActiveFault -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#geological">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#gradeOLD"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#geomorphological -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#geomorphological">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#geological"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#geophysical -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#geophysical">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#geological"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#gradeOLD -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#gradeOLD">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#property"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#gydrogeological -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#gydrogeological">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#geological"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#last_activation_age -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#last_activation_age">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#age"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#last_activation_age_index -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#last_activation_age_index">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#age"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#isActiveFault">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#qualityProperty"/>
     </owl:ObjectProperty>
     
 
@@ -237,7 +167,7 @@
     <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#length -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#length">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#qprop"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#quantityProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
@@ -257,26 +187,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#max">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#displace"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#meteorological -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#meteorological">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#gradeOLD"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#paleoseismological -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#paleoseismological">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#seismological"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault"/>
     </owl:ObjectProperty>
     
 
@@ -305,9 +215,20 @@
     
 
 
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#qprop -->
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#qualityProperty -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#qprop">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#qualityProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Value"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Qality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#quantityProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#quantityProperty">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#property"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Value"/>
@@ -315,13 +236,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#quality -->
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#rate -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#quality">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#property"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Value"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Qality"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#rate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#quantityProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Rate"/>
     </owl:ObjectProperty>
     
 
@@ -334,22 +254,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#seismological -->
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#reliablityClass -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#seismological">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#geological"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#slip_rate -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#slip_rate">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#geological"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#reliablityClass">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#qualityProperty"/>
     </owl:ObjectProperty>
     
 
@@ -390,25 +298,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#structural_geological -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#structural_geological">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#geological"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#total_activity -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#total_activity">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#gradeOLD"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#total_cenozoic_lateral_slip -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#total_cenozoic_lateral_slip">
@@ -439,7 +328,7 @@
     <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#type -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#type">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#quality"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#qualityProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Feature"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Qality"/>
@@ -550,6 +439,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Activity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Notional"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Angle -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Angle">
@@ -590,10 +487,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Cenosoic_Slip -->
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#CenosoicSlip -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Cenosoic_Slip">
+    <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#CenosoicSlip">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Slip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#CenosoicSlipQuality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#CenosoicSlipQuality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Qality"/>
     </owl:Class>
     
 
@@ -618,6 +523,22 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Depth">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Linear"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Event">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Info"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#EventAge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#EventAge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Event"/>
     </owl:Class>
     
 
@@ -647,7 +568,7 @@
     <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Info -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Info">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Value"/>
     </owl:Class>
     
 
@@ -706,10 +627,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Reliability_class -->
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Rate -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Reliability_class">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Info"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Rate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Value"/>
     </owl:Class>
     
 
@@ -811,10 +732,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Gidrogeological -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Gidrogeological">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#FeatureQuality"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#LS -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#LS">
         <rdf:type rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Qality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Lateral -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Lateral">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#CenosoicSlipQuality"/>
     </owl:NamedIndividual>
     
 
@@ -851,6 +788,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Vertical -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Vertical">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#CenosoicSlipQuality"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -865,21 +810,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Qality"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Value"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#engineering_geological"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#geomorphological"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#geophysical"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#gydrogeological"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#meteorological"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#paleoseismological"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#seismological"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#slip_rate"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#structural_geological"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#total_activity"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

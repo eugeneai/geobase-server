@@ -55,6 +55,9 @@
         <ObjectProperty IRI="slip_rate_mm_year"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="Vertical"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="geomorphological"/>
     </Declaration>
     <Declaration>
@@ -88,6 +91,12 @@
         <ObjectProperty IRI="type"/>
     </Declaration>
     <Declaration>
+        <Class IRI="CenosoicSlip"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Lateral"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="amplitude_slip"/>
     </Declaration>
     <Declaration>
@@ -115,13 +124,13 @@
         <ObjectProperty IRI="property"/>
     </Declaration>
     <Declaration>
+        <Class IRI="CenosoicSlipQuality"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="gydrogeological"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Seismological"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="cenosoic"/>
     </Declaration>
     <Declaration>
         <Class IRI="Depth"/>
@@ -139,7 +148,7 @@
         <ObjectProperty IRI="slip_sense_index"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Cenosoic_Slip"/>
+        <ObjectProperty IRI="cenosoicSlip"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="index"/>
@@ -309,8 +318,12 @@
         <Class IRI="Angular"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Cenosoic_Slip"/>
+        <Class IRI="CenosoicSlip"/>
         <Class IRI="Slip"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CenosoicSlipQuality"/>
+        <Class IRI="Qality"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Compiler"/>
@@ -414,6 +427,10 @@
         <NamedIndividual IRI="LS"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="CenosoicSlipQuality"/>
+        <NamedIndividual IRI="Lateral"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="FeatureQuality"/>
         <NamedIndividual IRI="Meteorological"/>
     </ClassAssertion>
@@ -428,6 +445,10 @@
     <ClassAssertion>
         <Class IRI="FeatureQuality"/>
         <NamedIndividual IRI="StructuralGeological"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="CenosoicSlipQuality"/>
+        <NamedIndividual IRI="Vertical"/>
     </ClassAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="absolute_deformation_age"/>
@@ -462,7 +483,7 @@
         <ObjectProperty IRI="dip"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="cenosoic"/>
+        <ObjectProperty IRI="cenosoicSlip"/>
         <ObjectProperty IRI="property"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -646,7 +667,7 @@
         <ObjectProperty IRI="azimuth"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="cenosoic"/>
+        <ObjectProperty IRI="cenosoicSlip"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="depth"/>
@@ -751,8 +772,8 @@
         <ObjectProperty IRI="width"/>
     </FunctionalObjectProperty>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="cenosoic"/>
-        <Class IRI="Slip"/>
+        <ObjectProperty IRI="cenosoicSlip"/>
+        <Class IRI="Fault"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="engineering_geological"/>
@@ -811,8 +832,8 @@
         <Class IRI="Value"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="cenosoic"/>
-        <Class IRI="Cenosoic_Slip"/>
+        <ObjectProperty IRI="cenosoicSlip"/>
+        <Class IRI="CenosoicSlip"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="feature"/>
