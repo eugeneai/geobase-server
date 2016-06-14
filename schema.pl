@@ -55,14 +55,14 @@ schema(Prop, 'of', SubjName):-
 
 schema(Prop, 'of', SubjName):-
         nonvar(SubjName),
-        gtrace,
         geob_prop(Prop, GProp),
         sub_atom(SubjName,0,1,R,H),
         sub_atom(SubjName,1,R,0,T),
         string_upper(H,U),
         atom_concat(U,T,SubjNameU),
         geob_class(SubjNameU, Subj),
-        rdf(GProp, rdfs:domain, Subj),!.
+        rdf_reachable(Subj, rdfs:subClassOf, Parent),
+        rdf(GProp, rdfs:domain, Parent),!.
 
 geob_prop(Prop, GProp):-
         rdf_global_id(geob:Prop, GProp),
