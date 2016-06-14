@@ -51,15 +51,16 @@ geobase(STR):-  STR \= "",
 		fail.
 geobase(_).
 
-geobase(STR, X, E):-  STR \= "",
-                atom_string(ATOM,STR),
-  		tokenize_atom(ATOM,LIST),               /* Returns a list of words(symbols)           */
-		filter(LIST,LIST1),           /* Removes punctuation and words to be ignored*/
-		pars(LIST1,E,Q),              /* Parses queries                            */
-		findall(A,eval(Q,A),L),
-		unik(L,L1),
-                % unit(E,U),
-		member(X,L1).
+geobase(STR, X, E):-
+        STR \= "",
+        atom_string(ATOM,STR),
+        tokenize_atom(ATOM,LIST),               /* Returns a list of words(symbols)           */
+        filter(LIST,LIST1),           /* Removes punctuation and words to be ignored*/
+        pars(LIST1,E,Q),              /* Parses queries                            */
+        findall(A,eval(Q,A),L),
+        unik(L,L1),
+                                % unit(E,U),
+        member(X,L1).
 
 
 loop(STR):-	geobase(STR).
@@ -77,7 +78,7 @@ loop(STR):-	STR \= '',readquery(L),loop(L).
   filter(['.'|T],L):-	!,filter(T,L).
   filter([','|T],L):-	!,filter(T,L).
   filter(['?'|T],L):-	!,filter(T,L).
-  filter([H|T],L):-	ignore(H),!,filter(T,L).
+  filter([H|T],L):-	ignore_token(H),!,filter(T,L).
   filter([H|T],[H|L]):-	filter(T,L).
   filter([],[]).
 
@@ -129,7 +130,7 @@ loop(STR):-	STR \= '',readquery(L),loop(L).
   known_word(X):-minn(X),!.     /*  If not a special case word, check the */
   known_word(X):-maxx(X),!.     /*  dynamic database for known words      */
   known_word(X):-size(_,X),!.   /*  additional words.                     */
-  known_word(X):-ignore(X),!.
+  known_word(X):-ignore_token(X),!.
   known_word(X):-unit(_,X),!.
   known_word(X):-assoc(_,AL),member(X,AL),!.
   known_word(X):-ent_name(_,X),!.
@@ -505,7 +506,7 @@ geobase:-
 
   viewlang1(5):-
 	write("Ignore\n******\n"),
-	findall(X,ignore(X),L),write_list(0,L),nl.
+	findall(X,ignore_token(X),L),write_list(0,L),nl.
 
   viewlang1(5):-
     write("\n\nPress any key to continue"),
@@ -571,7 +572,7 @@ geobase:-
 
   newignore:-	write("Ignore:"),readln(IGNORE),IGNORE\='',
 		reg_updated,
-		assert(ignore(IGNORE)),newignore.
+		assert(ignore_token(IGNORE)),newignore.
 
   newassoc:-
 		getassoc(ASSOC),
