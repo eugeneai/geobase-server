@@ -356,7 +356,7 @@ loop(STR):-	STR \= '',readquery(L),loop(L).
 
   eval(q_eaec(E1,A,E2,C),ANS):-db(E1,A,E2,ANS,C).
 
-  eval(q_e(E),ANS):-	ent(E,ANS).
+  eval(q_e(E),ANS):-	ent(E,ANS). % EVAL "ATOM"
 
   eval(q_or(TREE,_),ANS):- eval(TREE,ANS).
 
@@ -433,7 +433,7 @@ geobase:-
   proces(7):-viewlang.
   proces(8):-updatelang.
 
-  loaddba:-schema(_,_,_),!.  /* Database already loaded */
+  loaddba:-unit(_,_),!.  /* Database already loaded */
   loaddba:-
 	% existfile('geobase.lan'),existfile('geobase.dba'),
 	write("Loading database file - please wait\n"),

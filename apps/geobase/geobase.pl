@@ -4,7 +4,6 @@
 
 :- use_module(library(lists)).
 
-
 /*
 		 G E O B A S E
 		 =============
@@ -36,7 +35,7 @@
 
 
 :- dynamic([state/10, city/4, river/3, border/3,highlow/6,mountain/4,lake/3,road/2]).
-:- dynamic([schema/3,relop/2,assoc/2,synonym/2,ignore/1,minn/1,maxx/1,size/2,unit/2]).
+:- dynamic([relop/2,assoc/2,synonym/2,ignore/1,minn/1,maxx/1,size/2,unit/2]).
 
 
 % DATABASE - data
@@ -65,6 +64,7 @@
 %   road(STRING,STRINGLIST)
 
 :- consult('tpreds.pl').
+:- consult('schema.pl').
 % :- consult('menu2.pl').
 
 
@@ -79,18 +79,24 @@
   ent returns values for a given entity name. Ex. if called by
   ent(city,X)  X  is instantiated to cities.
 */
-  ent(continent,usa).
-  ent(city,NAME):-	city(_,_,NAME,_).
-  ent(state,NAME):-	state(NAME,_,_,_,_,_,_,_,_,_).
-  ent(capital,NAME):-	state(_,_,NAME,_,_,_,_,_,_,_).
-  ent(river,NAME):-	river(NAME,_,_).
-  ent(point,POINT):-	highlow(_,_,_,_,POINT,_).
-  ent(point,POINT):-	highlow(_,_,POINT,_,_,_).
-  ent(mountain,M):-	mountain(_,_,M,_).
-  ent(lake,LAKE):-	lake(LAKE,_,_).
-  ent(road,NUMBER):-	road(NUMBER,_).
-  ent(population,POPUL):-city(_,_,_,POPUL1),str_real(POPUL,POPUL1).
-  ent(population,S):-state(_,_,_,POPUL,_,_,_,_,_,_),str_real(S,POPUL).
+ent(continent,usa).
+ent(city,NAME):-	city(_,_,NAME,_).
+ent(state,NAME):-	state(NAME,_,_,_,_,_,_,_,_,_).
+ent(capital,NAME):-	state(_,_,NAME,_,_,_,_,_,_,_).
+ent(river,NAME):-	river(NAME,_,_).
+ent(point,POINT):-	highlow(_,_,_,_,POINT,_).
+ent(point,POINT):-	highlow(_,_,POINT,_,_,_).
+ent(mountain,M):-	mountain(_,_,M,_).
+ent(lake,LAKE):-	lake(LAKE,_,_).
+ent(road,NUMBER):-	road(NUMBER,_).
+ent(population,POPUL):-city(_,_,_,POPUL1),str_real(POPUL,POPUL1).
+ent(population,S):-state(_,_,_,POPUL,_,_,_,_,_,_),str_real(S,POPUL).
+
+ent(fault, S):-
+        rdf(S, rdf:type, geob:'Fault', geodata)
+        .
+        %,
+%        rdf(S, nie:identifier, literal(I), geodata).
 
 /*
   The db predicate is used to establish relationships between
@@ -142,6 +148,16 @@
   db(state,with,road,STATE,ROAD):-	road(ROAD,LIST),member(STATE,LIST).
 
   db(E,in,continent,VAL,usa):-		ent(E,VAL).
+db(name,of,_,Name,Subj):-
+        nonvar(Subj),
+        rdf_reachable(NameProp, rdfs:subPropertyOf, rdfs:label),
+        rdf(Subj, NameProp, literal(Name)),!.
+
+db(name,of,_,Name,Subj):-
+        nonvar(Subj),
+        rdf_reachable(NameProp, rdfs:subPropertyOf, dc:identifier),
+        rdf(Subj, NameProp, literal(Name)),!.
+
   db(name,of,_,X,X):-			nonvar(X).
 
 
