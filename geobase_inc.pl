@@ -1,4 +1,8 @@
 
+%:- rdf_meta
+%        e_lit(r,-,-).
+
+
 /*************************************************************************
   SUPPORT PREDICATES - These are the clauses which support the
   general system, including the parser and the menu system. Most of
@@ -57,7 +61,6 @@ geobase(STR, X, E):-
         tokenize_atom(ATOM,LIST),               /* Returns a list of words(symbols)           */
         filter(LIST,LIST1),           /* Removes punctuation and words to be ignored*/
         pars(LIST1,E,Q),              /* Parses queries                            */
-        gtrace,
         findall(A,eval_interp(Q,A),L),
         unik(L,L1),
                                 % unit(E,U),
@@ -320,7 +323,7 @@ loop(STR):-	STR \= '',readquery(L),loop(L).
   EVALUATION OF QUESTIONS
   *************************************************************************/
 
-e_i(literal(type(_,A)),A):-!.
+e_i(literal(type(T,A)),B):-xsdp_convert(T,[A],B),!.
 e_i(literal(A),A):-!.
 e_i(A,A).
 
