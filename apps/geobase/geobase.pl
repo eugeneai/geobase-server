@@ -93,10 +93,12 @@ ent(population,POPUL):-city(_,_,_,POPUL1),str_real(POPUL,POPUL1).
 ent(population,S):-state(_,_,_,POPUL,_,_,_,_,_,_),str_real(S,POPUL).
 
 ent(fault, S):-
-        rdf(S, rdf:type, geob:'Fault', geodata)
-        .
+        rdf(S, rdf:type, geob:'Fault', geodata).
         %,
 %        rdf(S, nie:identifier, literal(I), geodata).
+
+ent(E, A):-
+        geob_ent(E,A).
 
 /*
   The db predicate is used to establish relationships between
@@ -105,49 +107,51 @@ ent(fault, S):-
   return the values corresponding to the two entity names.
 */
 
-  /* Relationships about cities */
-  db(city,in,state,CITY,STATE):-	city(STATE,_,CITY,_).
-  db(state,with,city,STATE,CITY):-	city(STATE,_,CITY,_).
-  db(population,of,city,POPUL,CITY):-	city(_,_,CITY,POPUL1),str_real(POPUL,POPUL1).
-  db(population,of,capital,POPUL,CITY):-city(_,_,CITY,POPUL1),str_real(POPUL,POPUL1).
+/* Relationships about cities */
+db(city,in,state,CITY,STATE):-	city(STATE,_,CITY,_).
+db(state,with,city,STATE,CITY):-	city(STATE,_,CITY,_).
+db(population,of,city,POPUL,CITY):-	city(_,_,CITY,POPUL1),str_real(POPUL,POPUL1).
+db(population,of,capital,POPUL,CITY):-city(_,_,CITY,POPUL1),str_real(POPUL,POPUL1).
 
-  /* Relationships about states */
-  db(abbreviation,of,state,ABBREVIATION,STATE):-	state(STATE,ABBREVIATION,_,_,_,_,_,_,_,_).
-  db(state,with,abbreviation,STATE,ABBREVIATION):-state(STATE,ABBREVIATION,_,_,_,_,_,_,_,_).
-  db(area,of,state,AREA,STATE):-	state(STATE,_,_,_,AREA1,_,_,_,_,_),str_real(AREA,AREA1).
-  db(capital,of,state,CAPITAL,STATE):-	state(STATE,_,CAPITAL,_,_,_,_,_,_,_).
-  db(state,with,capital,STATE,CAPITAL):-state(STATE,_,CAPITAL,_,_,_,_,_,_,_).
-  db(population,of,state,POPULATION,STATE):-state(STATE,_,_,POPUL,_,_,_,_,_,_),str_real(POPULATION,POPUL).
-  db(state,border,state,STATE1,STATE2):-border(STATE2,_,LIST),member(STATE1,LIST).
+/* Relationships about states */
+db(abbreviation,of,state,ABBREVIATION,STATE):-	state(STATE,ABBREVIATION,_,_,_,_,_,_,_,_).
+db(state,with,abbreviation,STATE,ABBREVIATION):-state(STATE,ABBREVIATION,_,_,_,_,_,_,_,_).
+db(area,of,state,AREA,STATE):-	state(STATE,_,_,_,AREA1,_,_,_,_,_),str_real(AREA,AREA1).
+db(capital,of,state,CAPITAL,STATE):-	state(STATE,_,CAPITAL,_,_,_,_,_,_,_).
+db(state,with,capital,STATE,CAPITAL):-state(STATE,_,CAPITAL,_,_,_,_,_,_,_).
+db(population,of,state,POPULATION,STATE):-state(STATE,_,_,POPUL,_,_,_,_,_,_),str_real(POPULATION,POPUL).
+db(state,border,state,STATE1,STATE2):-border(STATE2,_,LIST),member(STATE1,LIST).
 
-  /* Relationships about rivers */
-  db(length,of,river,LENGTH,RIVER):-	river(RIVER,LENGTH1,_),str_real(LENGTH,LENGTH1).
-  db(state,with,river,STATE,RIVER):-	river(RIVER,_,LIST),member(STATE,LIST).
-  db(river,in,state,RIVER,STATE):-	river(RIVER,_,LIST),member(STATE,LIST).
+/* Relationships about rivers */
+db(length,of,river,LENGTH,RIVER):-	river(RIVER,LENGTH1,_),str_real(LENGTH,LENGTH1).
+db(state,with,river,STATE,RIVER):-	river(RIVER,_,LIST),member(STATE,LIST).
+db(river,in,state,RIVER,STATE):-	river(RIVER,_,LIST),member(STATE,LIST).
 
-  /* Relationships about points */
-  db(point,in,state,POINT,STATE):-	highlow(STATE,_,POINT,_,_,_).
-  db(point,in,state,POINT,STATE):-	highlow(STATE,_,_,_,POINT,_).
-  db(state,with,point,STATE,POINT):-	highlow(STATE,_,POINT,_,_,_).
-  db(state,with,point,STATE,POINT):-	highlow(STATE,_,_,_,POINT,_).
-  db(height,of,point,HEIGHT,POINT):-	highlow(_,_,_,_,POINT,H),str_real(HEIGHT,H),!.
-  db(height,of,point,HEIGHT,POINT):-	highlow(_,_,POINT,H,_,_),str_real(HEIGHT,H),!.
+/* Relationships about points */
+db(point,in,state,POINT,STATE):-	highlow(STATE,_,POINT,_,_,_).
+db(point,in,state,POINT,STATE):-	highlow(STATE,_,_,_,POINT,_).
+db(state,with,point,STATE,POINT):-	highlow(STATE,_,POINT,_,_,_).
+db(state,with,point,STATE,POINT):-	highlow(STATE,_,_,_,POINT,_).
+db(height,of,point,HEIGHT,POINT):-	highlow(_,_,_,_,POINT,H),str_real(HEIGHT,H),!.
+db(height,of,point,HEIGHT,POINT):-	highlow(_,_,POINT,H,_,_),str_real(HEIGHT,H),!.
 
-  /* Relationships about mountains */
-  db(mountain,in,state,MOUNT,STATE):-	mountain(STATE,_,MOUNT,_).
-  db(state,with,mountain,STATE,MOUNT):-	mountain(STATE,_,MOUNT,_).
-  db(height,of,mountain,HEIGHT,MOUNT):-	mountain(_,_,MOUNT,H1),str_real(HEIGHT,H1).
+/* Relationships about mountains */
+db(mountain,in,state,MOUNT,STATE):-	mountain(STATE,_,MOUNT,_).
+db(state,with,mountain,STATE,MOUNT):-	mountain(STATE,_,MOUNT,_).
+db(height,of,mountain,HEIGHT,MOUNT):-	mountain(_,_,MOUNT,H1),str_real(HEIGHT,H1).
 
-  /* Relationships about lakes */
-  db(lake,in,state,LAKE,STATE):-	lake(LAKE,_,LIST),member(STATE,LIST).
-  db(state,with,lake,STATE,LAKE):-	lake(LAKE,_,LIST),member(STATE,LIST).
-  db(area,of,lake,AREA,LAKE):-		lake(LAKE,A1,_),str_real(AREA,A1).
+/* Relationships about lakes */
+db(lake,in,state,LAKE,STATE):-	lake(LAKE,_,LIST),member(STATE,LIST).
+db(state,with,lake,STATE,LAKE):-	lake(LAKE,_,LIST),member(STATE,LIST).
+db(area,of,lake,AREA,LAKE):-		lake(LAKE,A1,_),str_real(AREA,A1).
 
-  /* Relationships about roads */
-  db(road,in,state,ROAD,STATE):-	road(ROAD,LIST),member(STATE,LIST).
-  db(state,with,road,STATE,ROAD):-	road(ROAD,LIST),member(STATE,LIST).
+/* Relationships about roads */
+db(road,in,state,ROAD,STATE):-	road(ROAD,LIST),member(STATE,LIST).
+db(state,with,road,STATE,ROAD):-	road(ROAD,LIST),member(STATE,LIST).
 
-  db(E,in,continent,VAL,usa):-		ent(E,VAL).
+db(E,in,continent,VAL,usa):-		ent(E,VAL).
+
+/* Relationshis of naming objects. Dig the name via ontology */
 db(name,of,_,Name,Subj):-
         nonvar(Subj),
         rdf_reachable(NameProp, rdfs:subPropertyOf, rdfs:label),
@@ -158,7 +162,13 @@ db(name,of,_,Name,Subj):-
         rdf_reachable(NameProp, rdfs:subPropertyOf, dc:identifier),
         rdf(Subj, NameProp, literal(Name)),!.
 
-  db(name,of,_,X,X):-			nonvar(X).
+db(name,of,_,X,X):-			nonvar(X).
+
+db(PropName,of,SubjClass, Obj, Subj):-
+        geob_prop(PropName, GPropName),
+        geob_ent_class(SubjClass, _),
+                                % rdf(Subj,rdf:type,GSubjClass,geodata), % already checked
+        rdf(Subj, GPropName, Obj, geodata).
 
 
 /* ------------------------ tests --------------------------------- */

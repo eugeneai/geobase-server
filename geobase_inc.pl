@@ -57,7 +57,8 @@ geobase(STR, X, E):-
         tokenize_atom(ATOM,LIST),               /* Returns a list of words(symbols)           */
         filter(LIST,LIST1),           /* Removes punctuation and words to be ignored*/
         pars(LIST1,E,Q),              /* Parses queries                            */
-        findall(A,eval(Q,A),L),
+        gtrace,
+        findall(A,eval_interp(Q,A),L),
         unik(L,L1),
                                 % unit(E,U),
         member(X,L1).
@@ -317,7 +318,15 @@ loop(STR):-	STR \= '',readquery(L),loop(L).
 
 /*************************************************************************
   EVALUATION OF QUESTIONS
-*************************************************************************/
+  *************************************************************************/
+
+e_i(literal(type(_,A)),A):-!.
+e_i(literal(A),A):-!.
+e_i(A,A).
+
+eval_interp(Q,IAns):-
+        eval(Q,A),
+        e_i(A,IAns).
 
   eval(q_min(ENT,TREE),ANS):-
 		findall(X,eval(TREE,X),L),

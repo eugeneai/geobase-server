@@ -56,13 +56,21 @@ schema(Prop, 'of', SubjName):-
 schema(Prop, 'of', SubjName):-
         nonvar(SubjName),
         geob_prop(Prop, GProp),
-        sub_atom(SubjName,0,1,R,H),
-        sub_atom(SubjName,1,R,0,T),
-        string_upper(H,U),
-        atom_concat(U,T,SubjNameU),
-        geob_class(SubjNameU, Subj),
+        geob_ent_class(SubjName, Subj),
         rdf_reachable(Subj, rdfs:subClassOf, Parent),
         rdf(GProp, rdfs:domain, Parent),!.
+
+geob_ent_class(Ent, Class):-
+        sub_atom(Ent,0,1,R,H),
+        sub_atom(Ent,1,R,0,T),
+        string_upper(H,U),
+        atom_concat(U,T,GEnt),
+        geob_class(GEnt, Class).
+
+geob_ent(E, A):-
+        nonvar(E),
+        geob_ent_class(E,Class),
+        rdf(A, rdf:type, Class, geodata).
 
 geob_prop(Prop, GProp):-
         rdf_global_id(geob:Prop, GProp),

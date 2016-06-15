@@ -215,6 +215,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#quality -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#quality">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#qualityProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Value"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#qualityProperty -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#qualityProperty">
@@ -258,6 +267,16 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#reliablityClass">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#qualityProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#slip -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#slip">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#value"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Slip"/>
     </owl:ObjectProperty>
     
 
@@ -688,6 +707,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#AC">
         <rdf:type rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Qality"/>
+        <rdfs:label xml:lang="ru">АЦ</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -760,6 +780,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Meteorological">
         <rdf:type rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#FeatureQuality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#ND -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#ND">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Qality"/>
     </owl:NamedIndividual>
     
 
