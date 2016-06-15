@@ -65,3 +65,5 @@ file_search_path(cliopatria, 'ClioPatria').
    ).
 
 %:-[namespaces].
+
+:-['load_pengines.pl'].
