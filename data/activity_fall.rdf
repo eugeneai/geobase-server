@@ -462,6 +462,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Activity">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Notional"/>
+        <rdfs:label xml:lang="ru">Активность</rdfs:label>
     </owl:Class>
     
 
@@ -564,7 +565,9 @@
 
     <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Fault">
+        <rdfs:label xml:lang="ru">Разлом</rdfs:label>
+    </owl:Class>
     
 
 
@@ -642,7 +645,9 @@
 
     <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Qality -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Qality"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Qality">
+        <rdfs:comment xml:lang="ru">ЛС</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -680,7 +685,9 @@
 
     <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Value -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Value"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Value">
+        <rdfs:label xml:lang="ru">Значение</rdfs:label>
+    </owl:Class>
     
 
 
@@ -716,6 +723,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#EZ">
         <rdf:type rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Qality"/>
+        <rdfs:label xml:lang="ru">ЭЗ</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -764,6 +772,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#LS">
         <rdf:type rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Qality"/>
+        <rdfs:label xml:lang="ru">ЛС</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -788,6 +797,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#ND">
         <rdf:type rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Qality"/>
+        <rdfs:label xml:lang="ru">НД</rdfs:label>
     </owl:NamedIndividual>
     
 
