@@ -527,6 +527,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Compiler">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Info"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label xml:lang="ru">Составитель</rdfs:label>
     </owl:Class>
     
 
@@ -699,6 +701,12 @@
     
 
 
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -802,10 +810,28 @@
     
 
 
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#NS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#NS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Qality"/>
+        <rdfs:label xml:lang="ru">НС</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Paleoseismological -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Paleoseismological">
         <rdf:type rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#FeatureQuality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#SS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#SS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#Qality"/>
+        <rdfs:label xml:lang="ru">СС</rdfs:label>
     </owl:NamedIndividual>
     
 
