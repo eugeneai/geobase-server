@@ -17,6 +17,7 @@
 	terms:contributor <http://john.mccr.ae/> ;
 	ns:license <https://creativecommons.org/licenses/by/4.0/> ;
 	terms:description "An ontology of types, values and properties to be used with the lemon model, partially derived from ISOcat."@en ;
+	terms:description "Онтология типов, значений и свойств, используемых совместно с онтологией lemon, частично является производной от ISOcat."@ru ;
 	terms:rights <https://creativecommons.org/licenses/by/4.0/> ;
 	terms:issued "2010-11-22"^^xsd:date ;
 	owl:versionInfo "2.0"@en ;
