@@ -1,0 +1,1968 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.owl-ontologies.com/Ontology1324312315.owl#"
+     xml:base="http://www.owl-ontologies.com/Ontology1324312315.owl"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#range -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#range"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#belongsToFieldOfStudies -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#belongsToFieldOfStudies">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Teaching_Unit"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Field_Of_Studies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#contributeTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#contributeTo">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Teaching_Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#endsBachelorStudiesOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#endsBachelorStudiesOn">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Semester"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#endsMasterStudiesOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#endsMasterStudiesOn">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Semester"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#enrolledForBachelorStudiesOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#enrolledForBachelorStudiesOn">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Semester"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The study track defines what are the studies</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#enrolledForMasterStudiesOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#enrolledForMasterStudiesOn">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Semester"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#evaluatedByProfessor -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#evaluatedByProfessor">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Evaluation"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Professor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#evaluatesTeachingUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#evaluatesTeachingUnit">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Evaluation"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Teaching_Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#follows -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#follows">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Major_Area"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Minor_Area"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Unique_Area"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For bowlogna bench</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#hasWrittenThesis -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#hasWrittenThesis">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Thesis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#involvesStudent -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#involvesStudent">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Validation"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#isAComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#isAComponentOf">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Subject"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Field_Of_Studies"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">est_une_composante_de</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#isAPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#isAPartOf">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Module"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programme dtudes [25] est_une_partie_de	Voie dtudes [23].Unit denseignement [34] est_une_partie_de Module [35]</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#isAffiliatedWithDepartment -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#isAffiliatedWithDepartment">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Professor"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#isAttachedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#isAttachedTo">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Branch"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">est_rattach_</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#isForAcademicDegree -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#isForAcademicDegree">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Track"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Academic_Degree"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#isForSemester -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#isForSemester">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Evaluation"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Teaching_Unit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Semester"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#isInStudyTrack -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#isInStudyTrack">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Track"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For recognizing the level of education for which a student studies.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#isSupervisedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#isSupervisedBy">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Field_Of_Studies"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">est_supervis_par</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#mentionGivenTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#mentionGivenTo">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Mention"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Thesis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#performedByStudent -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#performedByStudent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Evaluation"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#relatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#relatedTo">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Learning_Outcome"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Curriculum"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#supervisedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#supervisedBy">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Thesis"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Thesis_Supervisor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#typicalOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#typicalOf">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Complementary_Skills"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Field_Of_Studies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#validatesStudyProgram -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#validatesStudyProgram">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Validation"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#beginsOnDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#beginsOnDate">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Semester"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#beginsToApplyOnDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#beginsToApplyOnDate">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#endsOnDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#endsOnDate">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Semester"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#happensOnDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#happensOnDate">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Validation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#hasContext -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#hasContext">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PH</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#hasFamilyName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#hasFamilyName">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Person"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Professor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#hasFirstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#hasFirstName">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#hasMark -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#hasMark">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Evaluation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is the mark that is part of an evaluation</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#hasName">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Department"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Semester"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Track"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Teaching_Unit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#hasNumberOfECTS -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#hasNumberOfECTS">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Bachelor_Curriculum"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Evaluation"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Major_Area"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Minor_Area"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Teaching_Unit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#hasTerm -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#hasTerm">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VE</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#hasTermDefinition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#hasTermDefinition">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DF</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#isTaughtInLang -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#isTaughtInLang">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Teaching_Unit"/>
+        <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DE</rdfs:range>
+        <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EN</rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Academic_Degree -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Academic_Degree">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(Grade acadmique)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Adjustment_Study_Program -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Adjustment_Study_Program">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P. dajustement [32]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#13Anpassungsprogramm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Advanced_Study_Program -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Advanced_Study_Program">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P. dtudes approfondies [28]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#11Vertiefungsprogramm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Bachelor -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Bachelor">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Academic_Degree"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor [13]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#17Bachelor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Bachelor_Curriculum -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Bachelor_Curriculum">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Curriculum"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Etudes de bachelor [2]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#1Bachelorstudium"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Bachelor_Of_Arts -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Bachelor_Of_Arts">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Bachelor"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor of Arts [15]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#19Bachelor_of_Arts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Bachelor_Of_Science -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Bachelor_Of_Science">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Bachelor"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor of Science [17]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#20Bachelor_of_Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Bachelor_Thesis -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Bachelor_Thesis">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Thesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Travail de bachelor [62]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#38Bachelorarbeit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Basic_Module -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Basic_Module">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Module"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Module de base [36]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#28Grundlagenmodul"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Branch -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Branch">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Branche dtudes [12]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#6Studienrichtung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Catch_Up_Study_Program -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Catch_Up_Study_Program">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P. de rattrapage [33]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#14Passerelle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Certificate -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Certificate">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Document"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Certificat [22]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#23Zertifikat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Complementary_Module -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Complementary_Module">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Module"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Module complmentaire [41]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#32"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Complementary_Skills -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Complementary_Skills">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comptences transversales et complmentaires [57]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#44hard_skills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Complementary_Study_Program -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Complementary_Study_Program">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P. dt. complmentaires [29]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#12Ergnzungsprogramm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Curriculum -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Curriculum">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cursus (dtudes)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Department -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Department">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Represents department for the benchmark</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Diploma_Supplement -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Diploma_Supplement">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Document"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diploma supplement [19]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#24Diploma_Supplement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Document -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Document">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(Documents)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#ECTS_Credits -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#ECTS_Credits">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crdits ECTS [61]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#45ECTS-Punkt_(1)"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#End_Of_First_Year_Exam -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#End_Of_First_Year_Exam">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examen de fin de 1re anne [63]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#40Examen_am_Ende_des_ersten_Jahres_(1)"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Evaluation -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Evaluation">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evaluation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#External_Module -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#External_Module">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Module"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Module externe [42]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#33externes_Modul"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Field_Of_Studies -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Field_Of_Studies">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domaine dtudes [4]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#3Bereich_(1)"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Learning_Activity -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Learning_Activity">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prestation dtudes [52]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#41Studienleistung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Learning_Outcome -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Learning_Outcome">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acquis de formation [53]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#42Lernergebnis_(1)"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Major_Area -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Major_Area">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Field_Of_Studies"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domaine principal [8]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#9Hauptbereich_(1)"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Master -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Master">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Academic_Degree"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master [14]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#18Master"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Master_Curriculum -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Master_Curriculum">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Curriculum"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Etudes de master [3]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#2Masterstudium"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Master_Exam -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Master_Exam">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examen de master [66]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#47Masterarbeit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Master_Of_Arts -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Master_Of_Arts">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Master"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master of Arts [16]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#21Master_of_Arts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Master_Of_Science -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Master_Of_Science">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Master"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master of Science [18]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#22Master_of_Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Master_Orientation_Module -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Master_Orientation_Module">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Module"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Module dorientation_1 [37]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#29Orientierungsmodul"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Master_Thesis -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Master_Thesis">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Thesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mmoire de master [67]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#39Masterarbeit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Mention -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Mention">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mention_2 [55]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#43Prdikat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Minor_Area -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Minor_Area">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Field_Of_Studies"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domaine secondaire [9]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#10Nebenbereich_(1)"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Module -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Module">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Module [35]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#26Modul"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Obligatory_Module -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Obligatory_Module">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Module"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Module obligatoire [43]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#34Pflichtmodul"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Optional_Module -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Optional_Module">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Module"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Module optionnel [44]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#35Wahlpflichtmodul"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Optional_Subject -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Optional_Subject">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Subject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">matire  choix [46]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#37Wahlpflichtgebiet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Optional_Teaching_Unit -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Optional_Teaching_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Teaching_Unit"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cours  option [45]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#36Wahlpflichtveranstaltung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Person -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Person"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Professor -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Professor">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Person"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor for the benchmark</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Research_Orientation_Module -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Research_Orientation_Module">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Module"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Module dorientation_3 [39]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#30Orientierungsmodul"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Secondary_Study_Program -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Secondary_Study_Program">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Complementary_Study_Program"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P. dtudes secondaires [31]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#16Nebenprogramm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Semester -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Semester"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Specialisation_Module -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Specialisation_Module">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Module"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Module de spcialisation [40]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#31Vertiefungsmodul_(1)"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Specialization_Study_Program -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Specialization_Study_Program">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Complementary_Study_Program"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P. de spcialisation [30]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#15Spezialisierungsprogramm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Student -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Student">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Person"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Student for the benchmark.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program_120 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program_120">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programme dtudes 120</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program_180 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program_180">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programme dtudes 180</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program_30 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program_30">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programme dtudes 30</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program_50 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program_50">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programme dtudes 50</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program_60 -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program_60">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programme dtudes 60</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Track -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Track"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Subject -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Subject">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matire [5]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#7Gebiet_(1)"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Teaching_Unit -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Teaching_Unit">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit denseignement [34]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#27Unterrichtseinheit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is the description that was given in the PDF docuemnt of 70 pages.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Thesis -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Thesis">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Superclass of the terms Master Thesis and Bachelor Thesis</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Thesis_Supervisor -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Thesis_Supervisor">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Professor"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Directeur du mmoire [68]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#48Vademekum_04"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Transcript_Of_Records -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Transcript_Of_Records">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Document"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relev de prestations [20]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#25Auszug_der_Leistungsnachweise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Unique_Area -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Unique_Area">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Field_Of_Studies"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domaine unique [7]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#8Gesamtbereich"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Validation -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Validation">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Validation [65]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#46Masterexamen"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program">
+        <isAPartOf rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Track"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Track -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Track"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#1Bachelorstudium -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#1Bachelorstudium">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="de">Bachelorstudium</hasTerm>
+        <hasTerm xml:lang="en">Bachleor Curriculum</hasTerm>
+        <hasTerm xml:lang="it">Percorso di laurea</hasTerm>
+        <hasTerm xml:lang="fr">tudes de bachelor</hasTerm>
+        <hasTermDefinition xml:lang="de">Erste Studienstufe an einer universitren Hochschule, in der eine grundlegende wissenschaftliche Bildung vermittelt wird.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">First course of study at a university to acquire a basic scientific training.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Premier cursus d&apos;tudes dans une haute cole universitaire permettant d&apos;acqurir une formation scientifique de base.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Primo corso di studi universitari, volto all&apos;acquisizione di una formazione scientifica di base.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#10Nebenbereich_(1) -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#10Nebenbereich_(1)">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">Area II (2)</hasTerm>
+        <hasTerm xml:lang="de">Bereich II (2)</hasTerm>
+        <hasTerm xml:lang="it">Disciplina accademica II (2)</hasTerm>
+        <hasTerm xml:lang="it">Disciplina accademica secondaria (1)</hasTerm>
+        <hasTerm xml:lang="en">Minor Area (1)</hasTerm>
+        <hasTerm xml:lang="de">Nebenbereich (1)</hasTerm>
+        <hasTerm xml:lang="fr">domaine II (2)</hasTerm>
+        <hasTerm xml:lang="fr">domaine secondaire (1)</hasTerm>
+        <hasTermDefinition xml:lang="en">Area where, at the bachelor level, students choose a curriculum of 60 credits.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Bereich, in dem fr das Bachelorstudium ein Studienprogramm zu 60 ECTS gewhlt wird.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Disciplina accademica dalla quale uno studente di un corso di laurea sceglie un curriculum di 60 crediti ECTS. </hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Domaine dans lequel, au niveau du bachelor, l&apos;tudiant choisit un programme d&apos;tudes  60 crdits ECTS.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#11Vertiefungsprogramm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#11Vertiefungsprogramm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">Advanced Study Program</hasTerm>
+        <hasTerm xml:lang="it">Curriculum avanzato</hasTerm>
+        <hasTerm xml:lang="de">Vertiefungsprogramm</hasTerm>
+        <hasTerm xml:lang="fr">programme d&apos;tudes approfondies</hasTerm>
+        <hasTermDefinition xml:lang="it">Curriculum di 60 crediti ECTS che costituisce la parte principale del percorso di laurea magistrale.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Programme d&apos;tudes  60 crdits constituant la partie principale des tudes de Master.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Studienprogramm zu 60 Kreditpunkten, das den Hauptteil des Masterstudiums ausmacht.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Study Program of 60 credits constituting the main part of Master studies.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#12Ergnzungsprogramm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#12Ergnzungsprogramm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">Complementary Study Program</hasTerm>
+        <hasTerm xml:lang="it">Curriculum complementare</hasTerm>
+        <hasTerm xml:lang="de">Ergnzungsprogramm</hasTerm>
+        <hasTerm xml:lang="fr">programme d&apos;tudes complmentaires</hasTerm>
+        <hasTermDefinition xml:lang="it">Curriculum di 30 crediti ECTS svolto parallelamente ad un curriculum avanzato e che pu essere un curriculum secondario o un curriculum di specializzazione.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Programme d&apos;tudes  30 crdits ECTS accompli paralllement  un programme d&apos;tudes approfondies au niveau du master et qui peut consister en un programme de spcialisation ou un programme d&apos;tudes secondaires.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Studienprogramm zu 30 Kreditpunkten, das im Rahmen des Masterstudiums parallel zum Vertiefungsprogramm absolviert wird und aus einem Spezialisierungsprogramm oder einem Nebenprogramm bestehen kann.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Study Program of 30 ECTS credits performed alongside an Advanced Study Program at Masters level and may consist of a Secondary Study Program or a Specialization Study Program.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#13Anpassungsprogramm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#13Anpassungsprogramm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">Adjustment Study Program</hasTerm>
+        <hasTerm xml:lang="de">Anpassungsprogramm</hasTerm>
+        <hasTerm xml:lang="it">Curriculum di integrazione</hasTerm>
+        <hasTerm xml:lang="fr">programme d&apos;ajustement</hasTerm>
+        <hasTermDefinition xml:lang="it">Curriculum che permette di acquisire, durante il percorso di laurea magistrale, competenze non acquisite durante il percorso di laurea e richieste al fine di ottenere la laurea magistrale.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Programme d&apos;tudes qui permet, pendant les tudes de master, l&apos;acquisition de comptences non acquises durant les tudes de Bachelor et requises pour l&apos;octroi du diplme de Master.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Studienprogramm, das whrend dem Masterstudium absolviert wird und dem Erwerb von Kompetenzen dient, die im Bachelorstudium nicht erworben wurden und fr das Masterdiplom verlangt werden.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Study Program that allows, for Master Studies, the acquisition of skills not acquired during the Bachler and it is a requirement for obtaining a Master diploma.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#14Passerelle -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#14Passerelle">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">Catch Up Study Program</hasTerm>
+        <hasTerm xml:lang="it">Curriculum di riparazione</hasTerm>
+        <hasTerm xml:lang="de">Passerelle</hasTerm>
+        <hasTerm xml:lang="fr">programme de rattrapage</hasTerm>
+        <hasTermDefinition xml:lang="it">Curriculum che permette l&apos;acquisizione di competenze non acquisite durante il percorso di laurea e richieste per l&apos;ammissione al percorso di laurea magistrale.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Programme d&apos;tudes qui permet l&apos;acquisition de comptences non acquises durenat les tudes de Bachelor et requises pour l&apos;admission aux tudes de Master.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Studienprogramm zum Erwerb von Kompetenzen, die im Bachelorstudium nicht erworben wurden und fr die Zulassung zum Masterstudium verlangt werden.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Study Program that allows students to acquire skills not acquired during the Bachelor and it is required for admission to Master studies.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#15Spezialisierungsprogramm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#15Spezialisierungsprogramm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="it">Curriculum di specializzazione</hasTerm>
+        <hasTerm xml:lang="en">Specialization Study Program</hasTerm>
+        <hasTerm xml:lang="de">Spezialisierungsprogramm</hasTerm>
+        <hasTerm xml:lang="fr">programme de spcialisation</hasTerm>
+        <hasTermDefinition xml:lang="en">Complementary Study Program that allows students to acquire expertise in the field of which the program is about.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Curriculum complementare che permette l&apos;acquisizione di conoscenze specialistiche riguardanti la disciplina accademica da esso trattata.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Ergnzungsprogramm zum Erwerb von speziellen Fachkenntnissen im Bereich des Vertiefungsprogramms.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Programme d&apos;tudes complmentaires qui permet l&apos;acquisition de connaissances spcialises dans le domaine dont relve le programme d&apos;tudes approfondies.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#16Nebenprogramm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#16Nebenprogramm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="it">Curriculum secondario</hasTerm>
+        <hasTerm xml:lang="de">Nebenprogramm</hasTerm>
+        <hasTerm xml:lang="en">Secondary Study Program </hasTerm>
+        <hasTerm xml:lang="fr">programme d&apos;tudes secondaires</hasTerm>
+        <hasTermDefinition xml:lang="en">Complementary Study Program that allows the acquisition of additional training outside the domain of the Advanced Study Program.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Curriculum complementare che permette l&apos;acquisizione di conoscenze aggiuntive non riguardanti la disciplina accademica del curriculum avanzato.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Ergnzungsprogramm zum Erwerb einer zustzlichen Ausbildung ausserhalb des Bereichs, in dem das Vertiefungsprogramm gewhlt wurde.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Programme d&apos;tudes complmentaires qui permet l&apos;acquisition d&apos;un complment de formation  l&apos;extrieur du domaine dont relve le programme d&apos;tudes approfondies.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#17Bachelor -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#17Bachelor">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="de">Bachelor</hasTerm>
+        <hasTerm xml:lang="en">Bachelor</hasTerm>
+        <hasTerm xml:lang="fr">Bachelor</hasTerm>
+        <hasTerm xml:lang="it">Laurea</hasTerm>
+        <hasTermDefinition xml:lang="en">Academic degree that recognizes the completion of first degree studies in universities.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Akademischer Grad, der den Abschluss der ersten Stufe eines ordentlichen Studiums an einer universitren Hochschule besttigt.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Grade acadmique qui sanctionne l&apos;accomplissement d&apos;un premier degr des tudes dans une haute cole universitaire.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Titolo accademico che testimonia il completamento di un primo corso di studi universitari.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#18Master -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#18Master">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="it">Laurea magistrale</hasTerm>
+        <hasTerm xml:lang="de">Master</hasTerm>
+        <hasTerm xml:lang="en">Master</hasTerm>
+        <hasTerm xml:lang="fr">Master</hasTerm>
+        <hasTermDefinition xml:lang="en">Academic degree that recognizes the completion of second degree studies in universities.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Akademischer Grad, der den Abschluss der zweiten Stufe eines ordentlichen Studiums an einer universitren Hochschule besttigt.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Grade acadmique qui sanctionne l&apos;accomplissement d&apos;un deuxime degr des tudes dans une haute cole universitaire.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Titolo accademico che testimonia il completamento di un secondo corso di studi universitari.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#19Bachelor_of_Arts -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#19Bachelor_of_Arts">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasContext xml:lang="de">An der Philosophischen Fakultt existieren zwei Benennungen fr das Bachelordiplom: der ,,Bachelor of Arts&quot; (BA) und der ,,Bachelor of Science&quot; (BSc).</hasContext>
+        <hasContext xml:lang="fr">En Facult des lettres, il existe deux dnominations de diplmes de Bachelor : le Bachelor of Arts (BA) ou le Bachelor of Science (BSc).</hasContext>
+        <hasTerm xml:lang="de">Bachelor of Arts</hasTerm>
+        <hasTerm xml:lang="en">Bachelor of Arts</hasTerm>
+        <hasTerm xml:lang="fr">Bachelor of Arts</hasTerm>
+        <hasTerm xml:lang="it">Bachelor of Arts</hasTerm>
+        <hasTermDefinition xml:lang="en">Bachelor awarded by the faculties of Arts, Social and Economic Science, and Theology of the University of Freiburg.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Bachelor der Philosophischen, der Wirtschafts- und Sozialwissenschaftlichen und der Theologischen Fakultt der Universitt Freiburg.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Bachelor dlivr par les Facults des lettres, des sciences conomiques et sociales et de thologie de l&apos;Universit de Fribourg.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Laurea rilasciata dalle Facolt di lettere, di scienze economiche e sociali, e di teologia dell&apos;Universit di Friborgo.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#2Masterstudium -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#2Masterstudium">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">Master Curriculum</hasTerm>
+        <hasTerm xml:lang="de">Masterstudium</hasTerm>
+        <hasTerm xml:lang="it">Percorso di laurea magistrale</hasTerm>
+        <hasTerm xml:lang="fr">tudes de master</hasTerm>
+        <hasTermDefinition xml:lang="fr">Deuxime cursus d&apos;tudes dans une haute cole universitaire, permettant d&apos;acqurir des connaissances approfondies dans un ou plusieurs domaines d&apos;tudes et prparant  participer activement  des programmes de recherche.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Second course of study at a university to acquire knowledge in one or more fields of studies and prepare to actively participate in research programs.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Secondo corso di studi universitari, volto all&apos;acquisizione di conoscenze approfondite in una o pi discipline accademiche ed alla preparazione alla partecipazione attiva in programmi di ricerca.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Zweite Studienstufe an einer universitren Hochschule, in der die Studierenden vertiefte Kenntnisse in einem oder mehreren Studienbereichen erwerben und zu aktiver Mitarbeit in Forschungsprogrammen gefhrt werden.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#20Bachelor_of_Science -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#20Bachelor_of_Science">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="de">Bachelor of Science</hasTerm>
+        <hasTerm xml:lang="en">Bachelor of Science</hasTerm>
+        <hasTerm xml:lang="fr">Bachelor of Science</hasTerm>
+        <hasTerm xml:lang="it">Bachelor of Science</hasTerm>
+        <hasTermDefinition xml:lang="en">Bachelor awarded by the Faculty of Science and the Faculty of Letters in some of its fields of competence.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Bachelor dlivr par la Facult des sciences et par la Facult des lettres dans certains de ses domaines de comptence.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Bachelor, der von der Mathematisch-Naturwissenschaftlichen Fakultt sowie von der Philosophischen Fakultt in einigen ihrer Kompetenzbereiche verliehen wird.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Laurea rilasciata dalle Facolt di scienze e dalla Facolt di lettere, in alcune sue discipline di competenza, dell&apos;Universit di Friborgo.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#21Master_of_Arts -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#21Master_of_Arts">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasContext xml:lang="de">An der Philosophischen Fakultt existieren zwei Benennungen fr Masterdiplome: der ,,Master of Arts&quot; (MA) und der ,,Master of Science&quot; (MSc).</hasContext>
+        <hasContext xml:lang="fr">En Facult des lettres, il existe deux dnominations de diplmes de Master : le Master of Arts (MA) ou le Master of Science (MSc).</hasContext>
+        <hasTerm xml:lang="de">Master of Arts</hasTerm>
+        <hasTerm xml:lang="en">Master of Arts</hasTerm>
+        <hasTerm xml:lang="fr">Master of Arts</hasTerm>
+        <hasTerm xml:lang="it">Master of Arts</hasTerm>
+        <hasTermDefinition xml:lang="it">Laurea magistrale rilasciata dalle Facolt di lettere, di scienze economiche e sociali, e di teologia dell&apos;Universit di Friborgo.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Master awarded by the faculties of Arts, Social and Economic Science, and Theology of the University of Freiburg.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Master der Philosophischen, der Wirtschafts- und Sozialwissenschaftlichen und der Theologischen Fakultt der Universitt Freiburg.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Master dlivr par les Facults des lettres, des sciences conomiques et sociales et de thologie de l&apos;Universit de Fribourg.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#22Master_of_Science -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#22Master_of_Science">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="de">Master of Science</hasTerm>
+        <hasTerm xml:lang="en">Master of Science</hasTerm>
+        <hasTerm xml:lang="fr">Master of Science</hasTerm>
+        <hasTerm xml:lang="it">Master of Science</hasTerm>
+        <hasTermDefinition xml:lang="it">Laurea magistrale rilasciata dalle Facolt di scienze e dalla Facolt di lettere, in alcune sue discipline di competenza, dell&apos;Universit di Friborgo.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Master awarded by the Faculty of Science and the Faculty of Letters in some of its fields of competence.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Master dlivr par la Facult des sciences et par la Facult des lettres dans certains de ses domaines de comptence.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Master, der von der Mathematisch-Naturwissenschaftlichen Fakultt sowie von der Philosophischen Fakultt in einigen ihrer Kompetenzbereiche verliehen wird.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#23Zertifikat -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#23Zertifikat">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="it">Certificato di laurea</hasTerm>
+        <hasTerm xml:lang="de">Zertifikat</hasTerm>
+        <hasTerm xml:lang="fr">certificat</hasTerm>
+        <hasTerm xml:lang="en">certificate</hasTerm>
+        <hasTermDefinition xml:lang="fr">Document officiel mis par le dcanat et confirmant que le doyen ou la doyenne a confr  un-e tudiant-e un titre de Bachelor ou de Master.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Documento ufficiale, emesso dal Decanato, che asserisce che il rettore o la rettrice ha conferito ad uno/a studente/ssa una Laurea od una Laurea magistrale.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Official document issued by the Dean confirming that the Dean has given a student the title of Bachelor or Master.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Offizielles, vom Dekanat ausgestelltes Dokument, das besttigt, dass die Dekanin oder der Dekan einer oder einem Studierenden den Titel eines Bachelors oder Masters verliehen hat.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#24Diploma_Supplement -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#24Diploma_Supplement">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="de">Diploma Supplement</hasTerm>
+        <hasTerm xml:lang="en">Diploma Supplement</hasTerm>
+        <hasTerm xml:lang="fr">Diploma Supplement</hasTerm>
+        <hasTerm xml:lang="it">Diploma supplement</hasTerm>
+        <hasTermDefinition xml:lang="en">Diploma accompanying document describing in a standardized manner all judgments performed by the person named in the original Diploma.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Document accompagnant un diplme et dcrivant de manire standardise et dpourvue de tout jugement de valeur les tudes accomplies par la personne nomme dans le diplme original.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Documento, allegato ad un diploma, che fornisce la descrizione, secondo un modello condiviso, della natura, del livello, del contesto, del contenuto e dello status degli studi effettuati e completati da ciascuno studente.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Dokument, das mit einem Diplom abgegeben wird und das wertfrei und in standardisierten Erluterungen Einzelheiten des Studienprogramms beschreibt, das die im Originaldiplom genannte Person absolviert und erfolgreich abgeschlossen hat.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#25Auszug_der_Leistungsnachweise -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#25Auszug_der_Leistungsnachweise">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="de">Auszug der Leistungsnachweise</hasTerm>
+        <hasTerm xml:lang="it">Certificato di carriera accademica</hasTerm>
+        <hasTerm xml:lang="en">Transcript of Records</hasTerm>
+        <hasTerm xml:lang="fr">relev des prestations</hasTerm>
+        <hasTermDefinition xml:lang="en">Detailed list of learning activities completed by a student who has completed his/her studies at the Faculty of Letters.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Detaillierte Liste der Studienleistungen, die von einer oder einem Studierenden erbracht wurden, die oder der eine Ausbildung an der Philosophischen Fakultt abgeschlossen hat.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Lista dettagliata delle attivit educative svolte da uno/a studente/ssa che ha terminato gli studi presso la Facolt di lettere.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Liste dtaille des prestations d&apos;tudes accomplies par un-e tudiant-e qui a termin sa formation  la Facult des lettres.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#26Modul -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#26Modul">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">Educational Module</hasTerm>
+        <hasTerm xml:lang="de">Modul</hasTerm>
+        <hasTerm xml:lang="it">Modulo</hasTerm>
+        <hasTerm xml:lang="fr">module</hasTerm>
+        <hasTermDefinition xml:lang="fr">Ensemble structur et cohrent d&apos;activits d&apos;enseignement et d&apos;apprentissage qui permettent d&apos;atteindre un ou plusieurs objectifs de formation.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Insieme strutturato e coerente di attivit di insegnamento e di formazione che permettono di acquisire uno o pi obbiettivi formativi.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Structured and coherent set of teaching and learning activities that achieves one or more learning goals.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Strukturierter und kohrenter Verbund von Lehr- und Lerneinheiten zur Erreichung von Lernzielen.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#27Unterrichtseinheit -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#27Unterrichtseinheit">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">Teaching Unit</hasTerm>
+        <hasTerm xml:lang="it">Unit d&apos;insegnamento</hasTerm>
+        <hasTerm xml:lang="de">Unterrichtseinheit</hasTerm>
+        <hasTerm xml:lang="fr">unit d&apos;enseignement</hasTerm>
+        <hasTermDefinition xml:lang="de">Kleinste Einheit des Studienplans, fr die ECTS-Punkte vergeben werden.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Pi piccola unit del piano di studi che pu dar luogo all&apos;ottenimento di crediti.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Plus petite unit d&apos;un plan d&apos;tudes pouvant donner lieu  l&apos;octroi de crdits.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Smallest unit of a Study Plan that can lead to granting credits.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#28Grundlagenmodul -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#28Grundlagenmodul">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasContext xml:lang="de">Der Aufbau des Studiums im Hauptbereich erfordert die Belegung der vier angebotenen historischen Epochen (vier Grundlagenmodule) in den ersten zwei Jahren, worauf im dritten Jahr eine Spezialisierung in zwei historischen Epochen (zwei Vertiefungsmodule) folgt.</hasContext>
+        <hasContext xml:lang="fr">L&apos;organisation des tudes dans le domaine principal exige de couvrir les 4 priodes historiques (4 modules de base) dans les deux premires annes puis de choisir deux priodes historiques (2 modules de spcialisation)  approfondir durant la troisime anne.</hasContext>
+        <hasTerm xml:lang="en">Basic Module</hasTerm>
+        <hasTerm xml:lang="de">Grundlagenmodul</hasTerm>
+        <hasTerm xml:lang="it">Modulo di base</hasTerm>
+        <hasTerm xml:lang="fr">module de base</hasTerm>
+        <hasTermDefinition xml:lang="en">Educational Module to acquire basic knowledge in a Domain.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Modul, in dem Grundkenntnisse in einem Bereich erworben werden.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Module qui permet d&apos;acqurir des connaissances de base dans un domaine.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Modulo che permette di acquisire delle conoscenze di base riguardanti una disciplina accademica.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#29Orientierungsmodul -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#29Orientierungsmodul">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">Bachelor Orientation Module</hasTerm>
+        <hasTerm xml:lang="it">Modulo di orientamento magistrale</hasTerm>
+        <hasTerm xml:lang="de">Orientierungsmodul</hasTerm>
+        <hasTerm xml:lang="fr">module d&apos;orientation</hasTerm>
+        <hasTermDefinition xml:lang="en">Bachelor Educational Module that allows the student, based on knowledge already acquired in a subject, to move towards her Master studies.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Modul, das den Studierenden im Bachelorstudium die Mglichkeit bietet, sich in einem Studiengebiet auf der Grundlage von bereits erworbenen Kenntnissen im Hinblick auf das Masterstudium zu informieren.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Module de Bachelor qui permet  l&apos;tudiant-e, sur la base de connaissances dj acquises dans une matire, de s&apos;orienter en vue de ses tudes de master.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Modulo di laurea che permette allo/a studente/ssa di orientarsi, in base a conoscenze gi acquisite in una data materia, in vista del percorso di laurea magistrale.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#30Orientierungsmodul -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#30Orientierungsmodul">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="it">Modulo di orientamento alla ricerca</hasTerm>
+        <hasTerm xml:lang="de">Orientierungsmodul</hasTerm>
+        <hasTerm xml:lang="en">Research Orientation Module</hasTerm>
+        <hasTerm xml:lang="fr">module d&apos;orientation</hasTerm>
+        <hasTermDefinition xml:lang="en">Educational Module of Master programs in the field Multilingualism and didactics of foreign languages that offers an overview on areas and methods of critical research, and, secondly, on his teachings also encouraging individual reading, enabling students to acquire complementary skills in areas still largely unknown.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Modul in den Master-Programmen des Bereichs Mehrsprachigkeitsforschung und Fremdsprachendidaktik, das einerseits einen berblick gibt ber fr das jeweilige Fach wesentliche Arbeitsgebiete und Forschungsmethoden, und andererseits den Studierenden die Mglichkeit bietet, sich durch individuelle Lektre und Lehrveranstaltungen ergnzende Kompetenzen in noch weniger gut bekannten Gebieten anzueignen.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Module des programmes de master du domaine Plurilinguisme et didactique des langues trangres qui, d&apos;une part, offre un aperu sur les domaines de travail et les mthodes de recherches essentielles, et qui, d&apos;autre part, grce  ses enseignements et  un encouragement  la lecture individuelle, permet aux tudiant-e-s d&apos;acqurir des comptences complmentaires dans des domaines encore peu connus.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Modulo dei curriculum di laurea magistrale in Multilinguismo e didattica delle lingue straniere che, da un lato, offre una visione d&apos;insieme sui campi ed i metodi di ricerca essenziali e, dall&apos;altro lato, permette agli studenti/esse di acquisire competenze complementari nelle discipline accademiche ancora poco conosciute.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#31Vertiefungsmodul_(1) -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#31Vertiefungsmodul_(1)">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasContext xml:lang="de">Der Aufbau des Studiums im Hauptbereich erfordert die Belegung der vier angebotenen historischen Epochen (vier Grundlagenmodule) in den ersten zwei Jahren, worauf im dritten Jahr eine Spezialisierung in zwei historischen Epochen (zwei Vertiefungsmodule) folgt.</hasContext>
+        <hasContext xml:lang="fr">L&apos;organisation des tudes dans le domaine principal exige de couvrir les 4 priodes historiques (4 modules de base) dans les deux premires annes puis de choisir deux priodes historiques (2 modules de spcialisation)  approfondir durant la troisime anne.</hasContext>
+        <hasTerm xml:lang="it">Modulo di approfondimento (2)</hasTerm>
+        <hasTerm xml:lang="it">Modulo di orientamento (3)</hasTerm>
+        <hasTerm xml:lang="it">Modulo di specializzazione (1)</hasTerm>
+        <hasTerm xml:lang="de">Orientierungsmodul (2)</hasTerm>
+        <hasTerm xml:lang="en">Specialization Module (1)</hasTerm>
+        <hasTerm xml:lang="de">Vertiefungsmodul (1)</hasTerm>
+        <hasTerm xml:lang="en">in-depth module (2)</hasTerm>
+        <hasTerm xml:lang="fr">module d&apos;approfondissement (2)</hasTerm>
+        <hasTerm xml:lang="fr">module d&apos;orientation (3)</hasTerm>
+        <hasTerm xml:lang="fr">module de spcialisation (1)</hasTerm>
+        <hasTerm xml:lang="en">orientation module (3)</hasTerm>
+        <hasTermDefinition xml:lang="en">Educational Module to deepen the knowledge in a field.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Modul, in dem vertiefte Kenntnisse in einem Bereich erworben werden.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Module qui permet d&apos;approfondir ses connaissances dans un domaine.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Modulo che permette di approfondire conoscenze riguardanti un dominio.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#32">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">Complementary Module</hasTerm>
+        <hasTerm xml:lang="it">Modulo complementare</hasTerm>
+        <hasTerm xml:lang="fr">module complmentaire</hasTerm>
+        <hasTermDefinition xml:lang="en">Educational Module that contains courses taken to acquire complementary skills in the French subject.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Module qui contient les enseignements suivis au titre de comptences transversales et complmentaires pour le domaine franais.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Modulo che contiene corsi seguiti per acquisire competenze trasversali e complementari sul francese.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#33externes_Modul -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#33externes_Modul">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">External Moudule</hasTerm>
+        <hasTerm xml:lang="it">Modulo esterno</hasTerm>
+        <hasTerm xml:lang="de">externes Modul</hasTerm>
+        <hasTerm xml:lang="fr">module externe</hasTerm>
+        <hasTermDefinition xml:lang="en">Educational Module accomplished outside the area of the Study Program chosen by the student.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Modul, das die Studierenden ausserhalb des Bereichs belegen, von dem das gewhlte Studienprogramm abhngt.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Module accompli  l&apos;extrieur du domaine dont dpend le programme d&apos;tudes choisi par l&apos;tudiant-e.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Modulo compiuto all&apos;esterno della disciplina accademica dalla quale dipende il curriculum scelto dallo/a studente/ssa.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#34Pflichtmodul -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#34Pflichtmodul">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="it">Modulo obbligatorio</hasTerm>
+        <hasTerm xml:lang="en">Obligatory Module</hasTerm>
+        <hasTerm xml:lang="de">Pflichtmodul</hasTerm>
+        <hasTerm xml:lang="fr">module obligatoire</hasTerm>
+        <hasTermDefinition xml:lang="en">Educational Module which the student has to complete.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Modul, das die Studierenden belegen mssen.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Module que les tudiant-e-s doivent accomplir.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Modulo che gli studenti devono completare.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#35Wahlpflichtmodul -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#35Wahlpflichtmodul">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="it">Modulo opzionale</hasTerm>
+        <hasTerm xml:lang="en">Optional Module</hasTerm>
+        <hasTerm xml:lang="de">Wahlpflichtmodul</hasTerm>
+        <hasTerm xml:lang="fr">module optionnel</hasTerm>
+        <hasTermDefinition xml:lang="en">Educational Module which has to be chosen among a list of Modules.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Modul, das aus einer Auswahl von Modulen gewhlt werden muss.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Module qui doit tre choisi dans une liste de modules.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Modulo che dev&apos;essere scelto da una lista di moduli.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#36Wahlpflichtveranstaltung -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#36Wahlpflichtveranstaltung">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">Optional Teaching Unit</hasTerm>
+        <hasTerm xml:lang="it">Unit d&apos;insegnamento opzionale</hasTerm>
+        <hasTerm xml:lang="de">Wahlpflichtveranstaltung</hasTerm>
+        <hasTerm xml:lang="fr">cours  option</hasTerm>
+        <hasTermDefinition xml:lang="fr">Enseignement qui doit tre choisi dans une liste d&apos;enseignements.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Lehrveranstaltung, die aus einer Auswahl von Lehrveranstaltungen gewhlt werden muss.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Teaching Unit which has to be chosen among a list of Teaching Units.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Unit d&apos;insegnamento che dev&apos;essere scelta da una lista di unit d&apos;insegnamento.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#37Wahlpflichtgebiet -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#37Wahlpflichtgebiet">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="it">Materia opzionale</hasTerm>
+        <hasTerm xml:lang="en">Optional Subject</hasTerm>
+        <hasTerm xml:lang="de">Wahlpflichtgebiet</hasTerm>
+        <hasTerm xml:lang="fr">matire  choix</hasTerm>
+        <hasTermDefinition xml:lang="de">Gebiet, das aus einer Auswahl von Gebieten gewhlt werden muss.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Materia che dev&apos;essere scelta da una lista di materie.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Matire qui doit tre choisie dans une liste de matires.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Subject which has to be chosen among a list of Subjects.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#38Bachelorarbeit -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#38Bachelorarbeit">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">Bachelor Thesis  (2)</hasTerm>
+        <hasTerm xml:lang="en">Bachelor Thesis (1)</hasTerm>
+        <hasTerm xml:lang="de">Bachelorarbeit</hasTerm>
+        <hasTerm xml:lang="it">Tesi (2)</hasTerm>
+        <hasTerm xml:lang="it">Tesi di laurea (1)</hasTerm>
+        <hasTerm xml:lang="fr">mmoire de bachelor (2)</hasTerm>
+        <hasTerm xml:lang="fr">travail de bachelor (1)</hasTerm>
+        <hasTermDefinition xml:lang="it">Lavoro scientifico richiesto da certi dipartimenti che completa la laurea.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Scientific work required by some departments and completing the Bachelor studies.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Travail scientifique exig par certains dpartements et couronnant les tudes de bachelor.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Wissenschaftliche Arbeit, die von gewissen Departementen verlangt wird und die das Bachelorstudium abschliesst.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#39Masterarbeit -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#39Masterarbeit">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">Master Thesis</hasTerm>
+        <hasTerm xml:lang="de">Masterarbeit</hasTerm>
+        <hasTerm xml:lang="it">Tesi di laurea magistrale</hasTerm>
+        <hasTerm xml:lang="fr">mmoire de master</hasTerm>
+        <hasTermDefinition xml:lang="it">Lavoro scientifico redatto nell&apos;ambito di un percorso di laurea magistrale finalizzato a presentare i risultati di una ricerca personale riguardante una disciplina accademica relazionata al curriculum avanzato.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Scientific work written as part of the Master which presents the results of a research project on a topic related to the Field of Study covering the Advanced Study Program.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Travail scientifique rdig dans le cadre des tudes de master et prsentant les rsultats d&apos;une recherche personnelle sur un sujet en relation avec le domaine d&apos;tudes approfondies.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Wissenschaftliche Arbeit, die im Rahmen des Masterstudiums verfasst wird und in der die Ergebnisse einer persnlichen Forschungsarbeit ber ein Thema aus dem Bereich des Vertiefungsprogramms prsentiert werden.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#3Bereich_(1) -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#3Bereich_(1)">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="de">Bereich (1)</hasTerm>
+        <hasTerm xml:lang="it">Disciplina accademica (2)</hasTerm>
+        <hasTerm xml:lang="en">Domain (1)</hasTerm>
+        <hasTerm xml:lang="it">Dominio (1)</hasTerm>
+        <hasTerm xml:lang="en">Field of Study (2)</hasTerm>
+        <hasTerm xml:lang="de">Studienbereich (2)</hasTerm>
+        <hasTerm xml:lang="fr">domaine (1)</hasTerm>
+        <hasTerm xml:lang="fr">domaine d&apos;tudes (2)</hasTerm>
+        <hasTermDefinition xml:lang="en">First subdivision of the education in the Faculty of Arts at the University of Fribourg. It groups courses based ong a defined scientific discipline.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Premire subdivision de l&apos;offre d&apos;enseignement de la Facult des lettres de l&apos;Universit de Fribourg regroupant les cours d&apos;une discipline scientifique dfinie.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Prima suddivisione dell&apos;offerta formativa della Facolt di lettere dell&apos;Universit di Friborgo che raggruppa i corsi di una determinata disciplina scientifica.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Teil des Lehrangebots der Philosophischen Fakultt der Universitt Freiburg, der Lehrveranstaltungen eines inhaltlich definierten Sachgebiets auf der ersten Gliederungsstufe zusammenfasst.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#4Studiengang -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#4Studiengang">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasContext xml:lang="de">Der allgemeine Aufbau des Studiums in einem bestimmten Studiengang wird in einem vom Fakulttsrat angenommenen Reglement festgelegt.</hasContext>
+        <hasContext xml:lang="fr">L&apos;organisation gnrale des tudes dans une voie d&apos;tudes est dfinie dans un rglement approuv par le Conseil de Facult.</hasContext>
+        <hasTerm xml:lang="it">Corso di studi</hasTerm>
+        <hasTerm xml:lang="de">Studiengang</hasTerm>
+        <hasTerm xml:lang="en">Study Track</hasTerm>
+        <hasTerm xml:lang="fr">voie d&apos;tudes</hasTerm>
+        <hasTermDefinition xml:lang="en">Academic career leading to an academic degree.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Parcours universitaire conduisant  l&apos;obtention d&apos;un grade acadmique.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Percorso universitario che porta all&apos;ottenimento di un titolo universitario.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Studienlaufbahn, die zu einem akademischen Abschluss fhrt.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#40Examen_am_Ende_des_ersten_Jahres_(1) -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#40Examen_am_Ende_des_ersten_Jahres_(1)">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">End of First Year Exam</hasTerm>
+        <hasTerm xml:lang="de">Erstjahresexamen (2)</hasTerm>
+        <hasTerm xml:lang="it">Esame di fine primo anno</hasTerm>
+        <hasTerm xml:lang="de">Examen am Ende des ersten Jahres (1)</hasTerm>
+        <hasTerm xml:lang="fr">examen de fin de premire anne</hasTerm>
+        <hasTermDefinition xml:lang="it">Esame che termina il primo anno di studio e verifica l&apos;attitudine di uno/a studente/essa a proseguire la sua formazione in una determinata disciplina accademica.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Exam which ends the first year of study and verifies the ability of a student to continue his training in a subject.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Examen par lequel se termine la premire anne d&apos;tudes et qui permet de vrifier les aptitudes d&apos;un tudiant  poursuivre sa formation dans un domaine.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">berprfung der Studienleistungen, mit der am Ende des ersten Studienjahres festgestellt wird, ob ein Studierender die fr die Fortsetzung seiner Ausbildung in einem Bereich notwendigen Fhigkeiten besitzt.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#41Studienleistung -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#41Studienleistung">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="it">Attivit formativa</hasTerm>
+        <hasTerm xml:lang="en">Learning Activity</hasTerm>
+        <hasTerm xml:lang="de">Studienleistung</hasTerm>
+        <hasTerm xml:lang="fr">prestation d&apos;tudes</hasTerm>
+        <hasTermDefinition xml:lang="fr">Activit ralise par un-e tudiant-e dans le cadre d&apos;une ou plusieurs units d&apos;enseignement.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Activity carried out by a student in one or more Teaching Units.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Attivit svolta da uno/a studente/ssa in una o pi unit d&apos;insegnamento.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Von einem Studierenden im Rahmen einer oder mehrerer Unterrichtseinheiten erbrachte Leistung.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#42Lernergebnis_(1) -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#42Lernergebnis_(1)">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="it">Formazione acquisita</hasTerm>
+        <hasTerm xml:lang="en">Learning Outcome</hasTerm>
+        <hasTerm xml:lang="de">Learning outcome (2)</hasTerm>
+        <hasTerm xml:lang="de">Lernergebnis (1)</hasTerm>
+        <hasTerm xml:lang="fr">acquis de formation</hasTerm>
+        <hasTermDefinition xml:lang="de">Aussage darber, welche Kenntnisse, Fertigkeiten und Fhigkeiten Lernende nach Beendigung ihrer Lernaktivitt erworben haben mssen.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Declaration stating the knowledge and skills acquired by a student during a study period.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Dichiarazione che specifica le conoscenze e le competenze acquisite da uno/a studente/ssa durante un periodo di studio.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Enonc dclaratif prcisant les connaissances et les comptences  acqurir par un-e tudiant-e durant une priode d&apos;tudes.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#43Prdikat -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#43Prdikat">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasContext xml:lang="de">Folgende Prdikate werden vergeben: - summa cum laude fr eine Note zwischen 5,75 und 6; - insigni cum laude fr eine Note zwischen 5,25 und 5,74 ;- magna cum laude fr eine Note zwischen 4,75 und 5,24 ;- cum laude fr eine Note zwischen 4,25 und 4,74 ; - rite fr eine Note zwischen 4 und 4,24.</hasContext>
+        <hasContext xml:lang="fr">Les mentions suivantes sont attribues: - summa cum laude pour une note entre 5,75 et 6; - insigni cum laude pour une note entre 5,25 et 5,74 ;- magna cum laude pour une note entre 4,75 et 5,24 ;- cum laude pour une note entre 4,25 et 4,74 ; - rite pour une note entre 4 et 4,24.</hasContext>
+        <hasTerm xml:lang="it">Lode</hasTerm>
+        <hasTerm xml:lang="de">Prdikat</hasTerm>
+        <hasTerm xml:lang="en">mention</hasTerm>
+        <hasTerm xml:lang="fr">mention</hasTerm>
+        <hasTermDefinition xml:lang="fr">Apprciation octroye sur la base de la note finale obtenue par un-e tudiant-e dans un ou plusieurs programmes d&apos;tudes de la Facult des lettres.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Apprezzamento concesso sulla base del voto finale ottenuto da uno studente in uno o pi curricula della facolt di lettere.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Bewertung, die auf der Grundlage der von einer oder einem Studierenden in einem oder mehreren Studienprogrammen der Philosophischen Fakultt erlangten Schlussnote vergeben wird.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Recognition granted on the basis of the final mark obtained by a student in one or more Study Programs at the Faculty of Arts.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#44hard_skills -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#44hard_skills">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="de">hard skills</hasTerm>
+        <hasTerm xml:lang="en">null</hasTerm>
+        <hasTerm xml:lang="it">null</hasTerm>
+        <hasTermDefinition xml:lang="de">Fachspezifische Kenntnisse und Fertigkeiten, die im Rahmen von Lehrveranstaltungen oder im Selbststudium erworben werden.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">null</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">null</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#45ECTS-Punkt_(1) -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#45ECTS-Punkt_(1)">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en"> credit (2)</hasTerm>
+        <hasTerm xml:lang="it">Credito (2)</hasTerm>
+        <hasTerm xml:lang="it">Credito ECTS (1)</hasTerm>
+        <hasTerm xml:lang="en">ECTS credit (1)</hasTerm>
+        <hasTerm xml:lang="de">ECTS-Kreditpunkt (2)</hasTerm>
+        <hasTerm xml:lang="de">ECTS-Punkt (1)</hasTerm>
+        <hasTerm xml:lang="fr">crdit (2)</hasTerm>
+        <hasTerm xml:lang="fr">crdit ECTS (1)</hasTerm>
+        <hasTermDefinition xml:lang="de">Einheit zur Bemessung des durchschnittlichen Arbeitsaufwands fr das Erreichen eines Lernziels.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Unit che misura il carico di lavoro medio richiesto ad uno/a studente/ssa per raggiungere obbiettivo formativo.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Unit measure the measures the workload required to a student to achieve a learning goal.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Unit mesurant la charge de travail moyenne requise d&apos;un tudiant pour atteindre un objectif de formation.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#46Masterexamen -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#46Masterexamen">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="it">Esame di laurea magistrale</hasTerm>
+        <hasTerm xml:lang="en">Master Exam</hasTerm>
+        <hasTerm xml:lang="de">Masterexamen</hasTerm>
+        <hasTerm xml:lang="fr">examen de master</hasTerm>
+        <hasTermDefinition xml:lang="it">Esame che termina il percorso di laurea magistrale ed include la preparazione alla difesa della tesi di laurea magistrale.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Exam which ends the Master program and includes the preparation and defense of a Master Thesis.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Examen par lequel se terminent les tudes de master et qui comprend la rdaction et la soutenance d&apos;un mmoire de master.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Examen, mit dem das Masterstudium abgeschlossen wird und das das Verfassen der Masterarbeit und deren Verteidigung umfasst.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#47Masterarbeit -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#47Masterarbeit">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">Master Thesis</hasTerm>
+        <hasTerm xml:lang="de">Masterarbeit</hasTerm>
+        <hasTerm xml:lang="it">Tesi di laurea magistrale</hasTerm>
+        <hasTerm xml:lang="fr">mmoire de master</hasTerm>
+        <hasTermDefinition xml:lang="it">Lavoro scientifico redatto nell&apos;ambito di un percorso di laurea magistrale finalizzato a presentare i risultati di una ricerca personale riguardante una disciplina accademica relazionata al curriculum avanzato.</hasTermDefinition>
+        <hasTermDefinition xml:lang="en">Scientific work written as part of the Master which presents the results of a research project on a topic related to the Field of Study covering the Advanced Study Program.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Travail scientifique rdig dans le cadre des tudes de master et prsentant les rsultats d&apos;une recherche personnelle sur un sujet en relation avec le domaine d&apos;tudes approfondies.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Wissenschaftliche Arbeit, die im Rahmen des Masterstudiums verfasst wird und in der die Ergebnisse einer persnlichen Forschungsarbeit ber ein Thema aus dem Bereich des Vertiefungsprogramms prsentiert werden.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#48Vademekum_04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#48Vademekum_04">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="de">Vademekum 04</hasTerm>
+        <hasTerm xml:lang="en">null</hasTerm>
+        <hasTerm xml:lang="it">null</hasTerm>
+        <hasTermDefinition xml:lang="en">null</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">null</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#5Studienprogramm_(1) -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#5Studienprogramm_(1)">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasContext xml:lang="de">Ein Studienprogramm kann auch durch ein Set von Lernergebnissen definiert werden.</hasContext>
+        <hasTerm xml:lang="it">Curriculum (1)</hasTerm>
+        <hasTerm xml:lang="en">Program (2)</hasTerm>
+        <hasTerm xml:lang="de">Programm (2)</hasTerm>
+        <hasTerm xml:lang="de">Studienprogramm (1)</hasTerm>
+        <hasTerm xml:lang="en">Study Program (1)</hasTerm>
+        <hasTerm xml:lang="it">programma (2)</hasTerm>
+        <hasTerm xml:lang="fr">programme (2)</hasTerm>
+        <hasTerm xml:lang="fr">programme d&apos;tudes (1)</hasTerm>
+        <hasTermDefinition xml:lang="en">Part of a Study Track.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Parte di un corso di studi.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Partie d&apos;une voie d&apos;tudes.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Teil eines Studiengangs.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#6Studienrichtung -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#6Studienrichtung">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="en">Branch</hasTerm>
+        <hasTerm xml:lang="it">Indirizzo di studio</hasTerm>
+        <hasTerm xml:lang="de">Studienrichtung</hasTerm>
+        <hasTerm xml:lang="fr">branche d&apos;tudes</hasTerm>
+        <hasTermDefinition xml:lang="en">Grouping of Areas with related content.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Gruppierung inhaltlich verwandter Studienprogramme.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Raggruppamento di curriculum aventi contenuti correlati tra loro.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Regroupement de programmes d&apos;tudes au contenu apparent.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#7Gebiet_(1) -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#7Gebiet_(1)">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="de">Gebiet (1)</hasTerm>
+        <hasTerm xml:lang="it">Materia</hasTerm>
+        <hasTerm xml:lang="en">Subject</hasTerm>
+        <hasTerm xml:lang="de">Teilbereich (2)</hasTerm>
+        <hasTerm xml:lang="fr">matire</hasTerm>
+        <hasTermDefinition xml:lang="en">Part of a Domain.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Parte di un dominio.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Partie d&apos;un domaine.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Teil eines Bereichs.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#8Gesamtbereich -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#8Gesamtbereich">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="it">Disciplina accademica unica</hasTerm>
+        <hasTerm xml:lang="de">Gesamtbereich</hasTerm>
+        <hasTerm xml:lang="en">Unique Area</hasTerm>
+        <hasTerm xml:lang="fr">domaine unique</hasTerm>
+        <hasTermDefinition xml:lang="en">Area where, at the bachelor level, students choose a curriculum of 180 credits.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Bereich, in dem fr das Bachelorstudium ein Studienprogramm zu 180 ECTS gewhlt wird.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Disciplina accademica dalla quale uno studente di un corso di laurea sceglie un curriculum di 180 crediti ECTS.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Domaine dans lequel, au niveau du bachelor, l&apos;tudiant choisit un programme d&apos;tudes  180 crdits ECTS.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1324312315.owl#9Hauptbereich_(1) -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#9Hauptbereich_(1)">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#Term_Description"/>
+        <hasTerm xml:lang="de">Bereich I (2)</hasTerm>
+        <hasTerm xml:lang="it">Disciplina accademica I (2)</hasTerm>
+        <hasTerm xml:lang="it">Disciplina accademica principale (1)</hasTerm>
+        <hasTerm xml:lang="de">Hauptbereich (1)</hasTerm>
+        <hasTerm xml:lang="en">Major Area (1). Area I (2)</hasTerm>
+        <hasTerm xml:lang="fr">domaine I (2)</hasTerm>
+        <hasTerm xml:lang="fr">domaine principal (1)</hasTerm>
+        <hasTermDefinition xml:lang="en">Area where, at the bachelor level, students choose a curriculum of 120 credits.</hasTermDefinition>
+        <hasTermDefinition xml:lang="de">Bereich, in dem fr das Bachelorstudium ein Studienprogramm zu 120 ECTS gewhlt wird.</hasTermDefinition>
+        <hasTermDefinition xml:lang="it">Disciplina accademica dalla quale uno studente di un corso di laurea sceglie un curriculum di 120 crediti ECTS.</hasTermDefinition>
+        <hasTermDefinition xml:lang="fr">Domaine dans lequel, au niveau du bachelor, l&apos;tudiant choisit un programme d&apos;tudes  120 crdits ECTS.</hasTermDefinition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Comment for the moment</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Program">
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#5Studienprogramm_(1)"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programme dtudes [25]</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1324312315.owl#Study_Track">
+        <rdfs:isDefinedBy rdf:resource="http://www.owl-ontologies.com/Ontology1324312315.owl#4Studiengang"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Voie dtudes [23]</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
