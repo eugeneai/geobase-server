@@ -45,6 +45,7 @@ namespace(ddo,'http://www.semanticdesktop.org/ontologies/2011/10/05/ddo#','http:
 namespace(duho,'http://www.semanticdesktop.org/ontologies/2011/10/05/duho#','http://www.semanticdesktop.org/ontologies/2011/10/05/duho/duho_data.rdfs').
 namespace(drmo,'http://www.semanticdesktop.org/ontologies/2012/03/06/drmo#','http://www.semanticdesktop.org/ontologies/2012/03/06/drmo/drmo_data.rdfs').
 namespace(lemon, 'http://lemon-model.net/lemon#','http://lexinfo.net/ontology/lemon.rdf').
+% namespace(lexinfo, 'http://www.lexinfo.net/ontology/2.0/lexinfo#','http://www.lexinfo.net/ontology/2.0/lexinfo.rdf').
 namespace(v,'http://www.w3.org/2006/vcard/ns#','http://www.w3.org/2006/vcard/ns').
 namespace(sioc,'http://rdfs.org/sioc/ns#','http://rdfs.org/sioc/ns'). % User account and groups is here!!
 namespace(sioca,'http://rdfs.org/sioc/access#','http://rdfs.org/sioc/access').
@@ -77,6 +78,7 @@ namespace(ov,'http://open.vocab.org/terms/','http://vocab.org/open/terms.rdf'). 
 
 namespace(mvc,'http://purl.org/icc/MVC/ns#','data/MVC.ttl',debug). % Our View-Controller ontology.
 namespace(cll,'http://purl.org/cellula/ns#','data/CLL.ttl',debug). % Our ontology.
+namespace(lexinfo, 'http://www.lexinfo.net/ontology/2.0/lexinfo#','data/lexinfo.ttl',debug).
 
 namespace1(Abbr,IRI,[]):-
         namespace(Abbr, IRI).
