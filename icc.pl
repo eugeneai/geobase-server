@@ -22,6 +22,10 @@
                 template_query/3,
                 annotation_query/4,
                 annotation_query/5,
+                add_translation/4,
+                add_translation/2,
+                translatable/1,
+                translation/5,
 
                 stub/0]).
 
@@ -60,6 +64,9 @@
         description(-,r,r,-),
         refs(r,r,-,-),
         refs(r,r,-,-),
+        translatable(r),
+        translation(r,r,r,-,-),
+        add_translation(r,r,-,-),
         ptest(r)
 
 
@@ -351,3 +358,36 @@ load_default_graphs:-
 :- load_default_graphs.
 
 stub.
+
+% Ontology translation preparation rules.
+
+translatable(rdfs:comment).
+translatable(rdfs:label).
+
+translation(S, P, Translation, Lang, Graph):-
+    translatable(P),
+    triple(S,P,literal(lang(Lang, Translation)),Graph).
+
+add_translation(S, P, Lang, Graph):-
+    translation(S, P, _, Lang, Graph), !,
+    fail.
+
+add_translation(S, P, Lang, Graph):-
+    rdf_assert(S, P, literal(lang(Lang,'')), Graph).
+
+add_translation(Lang, Graph):-
+    atom(Graph),
+    translatable(P),
+    triple(S,P,_,Graph),
+    add_translation(S, P, Lang, Graph),
+    fail.
+
+add_translation(Lang, Graph):-
+    atom(Graph),
+    rdf_flush_journals([graph(Graph)]),
+    format('A translation template generated for graph ~w and language ~w.~n', [Graph, Lang]).
+
+add_translation(_, []).
+add_translation(Lang, [X|T]):-
+    add_translation(Lang, X),
+    add_translation(Lang, T).
