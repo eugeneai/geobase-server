@@ -44,7 +44,10 @@ namespace(dao,'http://www.semanticdesktop.org/ontologies/2011/10/05/dao#','http:
 namespace(ddo,'http://www.semanticdesktop.org/ontologies/2011/10/05/ddo#','http://www.semanticdesktop.org/ontologies/2011/10/05/ddo/ddo_data.rdfs').
 namespace(duho,'http://www.semanticdesktop.org/ontologies/2011/10/05/duho#','http://www.semanticdesktop.org/ontologies/2011/10/05/duho/duho_data.rdfs').
 namespace(drmo,'http://www.semanticdesktop.org/ontologies/2012/03/06/drmo#','http://www.semanticdesktop.org/ontologies/2012/03/06/drmo/drmo_data.rdfs').
-namespace(lemon, 'http://lemon-model.net/lemon#','http://lexinfo.net/ontology/lemon.rdf').
+
+namespace(lemon, 'http://lemon-model.net/lemon#','http://lemon-model.net/lemon.rdf').
+namespace(lexinfo, 'http://www.lexinfo.net/ontology/2.0/lexinfo#','http://www.lexinfo.net/ontology/2.0/lexinfo.rdf').
+
 namespace(v,'http://www.w3.org/2006/vcard/ns#','http://www.w3.org/2006/vcard/ns').
 namespace(sioc,'http://rdfs.org/sioc/ns#','http://rdfs.org/sioc/ns'). % User account and groups is here!!
 namespace(sioca,'http://rdfs.org/sioc/access#','http://rdfs.org/sioc/access').
