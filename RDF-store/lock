@@ -1,0 +1,3 @@
+/* RDF Database is in use */
+
+locked([time(1472884412),pid(8739),host('localhost.localdomain')]).
