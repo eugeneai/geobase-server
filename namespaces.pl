@@ -1,4 +1,10 @@
-:- module(namespaces, [namespace/2,namespace/3, namespace/4, register_prefixes/0]).
+:- module(namespaces, [namespace/2,
+                       namespace/3,
+                       namespace/4,
+                       register_prefixes/0,
+                       load_default_graphs/0,
+                       save_dbs/0
+                      ]).
 
 :- use_module(library(semweb/rdf_db)).
 
@@ -67,6 +73,8 @@ namespace(ov,'http://open.vocab.org/terms/','http://vocab.org/open/terms.rdf'). 
                                 % WordNet
 %namespace(wn, 'http://wordnet-rdf.princeton.edu/ontology#','http://wordnet-rdf.princeton.edu/wn31.nt.gz').
 %namespace(wordnet, 'http://www.w3.org/2006/03/wn/wn20/schema/','http://www.w3.org/2006/03/wn/wn20/schemas/wnfull.rdfs').
+namespace(co, 'http://purl.org/co/','data/src/CollectionOntology.rdf').  % Collection Ontology http://www.essepuntato.it/lode/http://purl.org/co
+namespace(fabio, 'http://purl.org/spar/fabio','http://www.sparontologies.net/ontologies/fabio/source.ttl').  % Published item description. http://www.sparontologies.net/ontologies/fabio/source.html
 
 
                                 % http://lexinfo.net/lmf.owl
@@ -80,7 +88,8 @@ namespace(ov,'http://open.vocab.org/terms/','http://vocab.org/open/terms.rdf'). 
 
 namespace(mvc,'http://purl.org/icc/MVC/ns#','data/MVC.ttl',debug). % Our View-Controller ontology.
 namespace(cll,'http://purl.org/cellula/ns#','data/CLL.ttl',debug). % Our ontology.
-namespace(geob,'http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#','data/activity_fall.rdf',debug). % Our Geobase ontology.
+namespace(geob,'http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#','data/faults.rdf',debug). % Our Geobase ontology.
+% namespace(geobdata,'http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#','data/faults_data.rdf',debug). % Our Geobase ontology.
 
 namespace1(Abbr,IRI,[]):-
         namespace(Abbr, IRI).
@@ -92,3 +101,58 @@ namespace1(Abbr,IRI,[force(true)]):-
 register_prefixes:-
         namespace1(Abbr, IRI, Op), rdf_register_prefix(Abbr, IRI, Op), fail.
 register_prefixes.
+
+load_from_internet:-
+        namespace(NS,_, RDF), \+ rdf_graph(NS),
+        rdf_load(RDF, [graph(NS)]),
+        save_db(NS),
+        fail.
+
+load_from_internet:-      % Debugging load. Previous graph is removed.
+        namespace(NS,_, RDF, debug),
+        rdf_unload_graph(NS),
+        rdf_load(RDF, [graph(NS)]),
+        fail.
+
+load_from_internet.
+
+load_from_binary:-
+        namespace(G,_,_), \+ rdf_graph(G),
+        graph_binary_name(G,FN),
+        rdf_load_db_gz(FN),fail.
+load_from_binary.
+
+rdf_load_db_gz(FN):-
+        format(atom(CMD), 'gunzip -c data/~w.gz > ~w', [FN,FN]),
+        shell(CMD, Status), % format('Status: ~w for ~w\n', [Status, FN]),
+        % (Status==1,!, gtrace; true),
+        Status==0,
+        rdf_load_db(FN),
+        format(atom(CMD1), 'rm -f ~w', [FN]),
+        shell(CMD1,_).
+
+graph_binary_name(G,N):-
+        atom_length(G,GL),GL<10,
+        atom_concat(G,'.db',N).
+
+
+save_db(G):-
+        rdf_graph(G),
+        graph_binary_name(G,FN),
+        rdf_save_db(FN,G),
+        format(atom(CMD), 'gzip ~w', [FN]),
+        shell(CMD),
+        format(atom(CMD1), 'mv -f ~w.gz data/',[FN]),
+        shell(CMD1).
+
+save_dbs:-
+        save_db(_),
+        fail.
+save_dbs.
+
+%save_dbs:-
+%        rdf_save("RDF-SCHEMAS.rdf").
+
+load_default_graphs:-
+        load_from_binary,!,
+        load_from_internet.

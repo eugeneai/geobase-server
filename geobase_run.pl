@@ -14,4 +14,4 @@ sandbox:safe_primitive(geobase:geobase(_,_,_)).
 :- geobase:loaddba.
 :- icc:create_graph(geob).
 :- icc:create_graph(geodata).
-:- rdf_load('data/activity_fall_data.ttl',[graph(geodata)]).
+:- rdf_load('data/faults_data.ttl',[graph(geodata)]).

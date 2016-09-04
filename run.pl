@@ -64,6 +64,10 @@ file_search_path(cliopatria, 'ClioPatria').
    ;   true
    ).
 
-:-[namespaces].
+:- use_module(namespaces).
+
+:- namespace:register_prefixes.
+:- namespace:load_default_graphs.
+:- namespace:save_dbs.
 
 %:-['load_pengines.pl'].
