@@ -1,6 +1,6 @@
 passwd
 /rdf/
-
+/RDF-store/lock
 
 /users.db
 catalog-v*.xml
