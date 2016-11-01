@@ -2,7 +2,7 @@
 
 export PORT=3030 
 #swipl daemon.pl --port=$PORT --ip=0.0.0.0 
-./daemon.pl --http --ip=0.0.0.0 --port=$PORT 
+/usr/bin/swipl ./daemon.pl --http --ip=0.0.0.0 --port=$PORT 
 
 # Usage: <program> option ...
 # Options:
