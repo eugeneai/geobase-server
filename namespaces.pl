@@ -75,7 +75,7 @@ namespace(ov,'http://open.vocab.org/terms/','http://vocab.org/open/terms.rdf'). 
 %namespace(wn, 'http://wordnet-rdf.princeton.edu/ontology#','http://wordnet-rdf.princeton.edu/wn31.nt.gz').
 %namespace(wordnet, 'http://www.w3.org/2006/03/wn/wn20/schema/','http://www.w3.org/2006/03/wn/wn20/schemas/wnfull.rdfs').
 namespace(co, 'http://purl.org/co/','data/src/CollectionOntology.rdf').  % Collection Ontology http://www.essepuntato.it/lode/http://purl.org/co
-namespace(fabio, 'http://purl.org/spar/fabio','http://www.sparontologies.net/ontologies/fabio/source.ttl').  % Published item description. http://www.sparontologies.net/ontologies/fabio/source.html
+% namespace(fabio, 'http://purl.org/spar/fabio','http://www.sparontologies.net/ontologies/fabio/source.ttl').  % Published item description. http://www.sparontologies.net/ontologies/fabio/source.html
 
 
                                 % http://lexinfo.net/lmf.owl
