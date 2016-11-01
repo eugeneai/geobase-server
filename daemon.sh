@@ -1,3 +1,3 @@
 #!/bin/bash
 
-PORT=3030 swipl daemon.pl
+PORT=3030 swipl daemon.pl --port=$PORT
