@@ -59,6 +59,7 @@ namespace(sioc,'http://rdfs.org/sioc/ns#','http://rdfs.org/sioc/ns'). % User acc
 namespace(sioca,'http://rdfs.org/sioc/access#','http://rdfs.org/sioc/access').
 namespace(sioct,'http://rdfs.org/sioc/types#','http://rdfs.org/sioc/types').
 namespace(siocs,'http://rdfs.org/sioc/services#','http://rdfs.org/sioc/services').
+namespace(teach,'http://linkedscience.org/teach/ns#','http://lov.okfn.org/dataset/lov/vocabs/teach/versions/2013-04-25.n3').
 
 namespace(ui,'http://www.w3.org/ns/ui#','http://www.w3.org/ns/ui').
 namespace(pattern,'http://www.essepuntato.it/2008/12/pattern#','data/pattern.owl').
@@ -88,8 +89,10 @@ namespace(fabio, 'http://purl.org/spar/fabio','http://www.sparontologies.net/ont
 
 namespace(mvc,'http://purl.org/icc/MVC/ns#','data/MVC.ttl',debug). % Our View-Controller ontology.
 namespace(cll,'http://purl.org/cellula/ns#','data/CLL.ttl',debug). % Our ontology.
-namespace(geob,'http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#','data/faults.rdf',debug). % Our Geobase ontology.
+
+% namespace(geob,'http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#','data/faults.rdf',debug). % Our Geobase ontology.
 % namespace(geobdata,'http://www.semanticweb.org/bernard_black/ontologies/2016/3/fault#','data/faults_data.rdf',debug). % Our Geobase ontology.
+namespace(bowl, 'http://www.owl-ontologies.com/Ontology1324312315.owl#','data/bowlogna.rdf',debug). % http://diuf.unifr.ch/main/xi/sites/diuf.unifr.ch.main.xi/files/ConverterdBowlognaOntology_v_0_3.owl
 
 namespace1(Abbr,IRI,[]):-
         namespace(Abbr, IRI).
