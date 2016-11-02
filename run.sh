@@ -2,5 +2,5 @@
 
 # PORT=3030 swipl geobase_run.pl
 
-screen -S ClioPatria -d -m 'PORT=3030 swipl run.pl'
+PORT=3030 screen -S ClioPatria -d -m swipl run.pl
 echo "Screen with ClioPatria started."
